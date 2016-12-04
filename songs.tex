@@ -1,0 +1,51 @@
+% XeLaTeX 
+
+\documentclass{minimal}
+\usepackage[voc]{arabxetex} % default option is "novoc"
+                       % other options are "voc", "fullvoc", "utf" and "trans"
+% arabxetex loads bidi.sty and fontspec.sty		       
+
+\setmainfont{Linux Libertine}
+
+%% \makeatletter
+%% \def\Allah{\begingroup\allahfont\char"FDF2\endgroup}
+%% \makeatother
+
+\linespread{5}
+
+\listfiles
+ 
+\newfontfamily\arabicfont[Script=Arabic,Scale=2]{Amiri}
+% you can also define \farsifont, \uighurfont, etc if you want
+\begin{document}
+
+%% This is some text in English with Arabic insertion \textarab{`arabI}.
+
+%% This is some text in English with Arabic insertion \textarab[utf]{عربي}.
+
+%% This is some text in English with Arabic insertion \textarab[voc]{`arabI}.
+
+%% \SetTranslitConvention{dmg}
+
+%% bi-Asmi al-ll_ahi al-ra.hmAni al-ra.hImi
+
+\begin{arab}
+
+BASMALA
+
+al-ll_ahu al-ll_ahu al-ll_ahu al-ll_ah \quad al-ll_ahu al-ll_ah lA il_aha illA al-ll_ah
+
+ata"InAka bi-al-faqri yA _dA al-.ginY \quad fa-anta alla_d"I lam tazal mu.hsinA
+
+wa `awadtanA kulla fa.dliN `asY \quad yad"Umu alla_d"I minka `awadtanA
+
+masAk"Inuka al-^su`_du qad wulihU"A \quad bi-.hubbika i_d huwa aq.sY al-munY
+
+i_dA kunta fI kulli .hAliN ma`I \quad fa-`an .hamli zAdI anA fI .ginY
+
+\end{arab}
+
+
+
+\end{document}
+
