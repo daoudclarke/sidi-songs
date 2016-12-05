@@ -5,6 +5,8 @@
                        % other options are "voc", "fullvoc", "utf" and "trans"
 % arabxetex loads bidi.sty and fontspec.sty		       
 
+\usepackage{bidipoem}
+
 \setmainfont{Linux Libertine}
 
 %% \makeatletter
@@ -16,6 +18,8 @@
 \listfiles
  
 \newfontfamily\arabicfont[Script=Arabic,Scale=2]{Amiri}
+
+%% \renewcommand\baytwidth{0.25\textwidth}
 
 \newcommand{\w}{\char"0627\char"0610}
 
@@ -36,29 +40,21 @@
 
 BASMALA
 
-al-ll_ahu al-ll_ahu al-ll_ahu al-ll_ah \quad al-ll_ahu al-ll_ah lA il_aha illA al-ll_ah
+\begin{traditionalpoem}
 
-ata"InAka bi-al-faqri yA _dA al-.ginY \quad fa-anta alla_d"I lam tazal mu.hsinA
-
-wa `awadtanA kulla fa.dliN `asY \quad yadUmu alla_d"I minka `awadtanA
-
-masAk"Inuka al-^su`_du qad wulihU"A \quad bi-.hubbika i_d huwa aq.sY al-munY
-
-i_dA kunta fI kulli .hAliN ma`I \quad fa-`an .hamli zAdI anA fI .ginY
-
-ra'aynAka fI kulli amriN badA \quad wa laysa min al-amri ^say'uN lanA
-
-satartu \w smakum .gIraTaN hA anA \quad umawwihu bi-al^sa`bi wa-almun.hanY
-
-fa-mA a.haduN fI al-.ginY mi_tlukum \quad wa fI al-faqri lA a.haduN mi_tlunA
-
-fa-'antum huwa al-.haqqu lA .gayrakum \quad fa-yA layta ^si`rI anA man anA
-
-fa-yA rabbi .salli `alY al-mu.s.tafY \quad .salATaN takUnu ^sifA'aN lanA
-
-wa-yA rabbi .salli `alY al-mu.s.tafY \quad .salATaN takUnu dawA'aN lanA
-
-wa-yA rabbi .salli `alY al-mu.s.tafY \quad .salATaN takUnu amAnaN lanA
+al-ll_ahu al-ll_ahu al-ll_ahu al-ll_ah &\quad al-ll_ahu al-ll_ah lA il_aha illA al-ll_ah\\
+ata"InAka bi-al-faqri yA _dA al-.ginY &\quad fa-anta alla_d"I lam tazal mu.hsinA\\
+wa `awadtanA kulla fa.dliN `asY &\quad yadUmu alla_d"I minka `awadtanA\\
+masAkInuka al-^su`_du qad wulihU"A &\quad bi-.hubbika i_d huwa aq.sY al-munY\\
+i_dA kunta fI kulli .hAliN ma`I &\quad fa-`an .hamli zAdI anA fI .ginY\\
+ra'aynAka fI kulli amriN badA &\quad wa laysa min al-amri ^say'uN lanA\\
+satartu \w smakum .gIraTaN hA anA &\quad umawwihu bi-al^sa`bi wa-almun.hanY\\
+fa-mA a.haduN fI al-.ginY mi_tlukum &\quad wa fI al-faqri lA a.haduN mi_tlunA\\
+fa-'antum huwa al-.haqqu lA .gayrakum &\quad fa-yA layta ^si`rI anA man anA\\
+fa-yA rabbi .salli `alY al-mu.s.tafY &\quad .salATaN takUnu ^sifA'aN lanA\\
+wa-yA rabbi .salli `alY al-mu.s.tafY &\quad .salATaN takUnu dawA'aN lanA\\
+wa-yA rabbi .salli `alY al-mu.s.tafY &\quad .salATaN takUnu amAnaN lanA
+\end{traditionalpoem}
 
 \end{arab}
 
