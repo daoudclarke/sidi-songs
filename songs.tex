@@ -1,6 +1,7 @@
 % XeLaTeX 
 
 \documentclass{minimal}
+\usepackage{longtable}
 \usepackage[voc]{arabxetex} % default option is "novoc"
                        % other options are "voc", "fullvoc", "utf" and "trans"
 % arabxetex loads bidi.sty and fontspec.sty		       
@@ -24,7 +25,9 @@
 \newcommand{\w}{\char"0627\char"0610}
 
 \newcommand{\bayt}[2]{#1&\quad#2\\\textLR{\textarab[trans]{#2}}&\quad\textLR{\textarab[trans]{#1}}\\}
-%% \newcommand{\trans}[2]{#1&\quad#2\\\textLR{\textarab[trans]{#2}}&\quad\textLR{\textarab[trans]{#1}}\\}
+\newcommand{\trans}[2]{\textarab{#1}&\textarab[trans]{#1}&#2\\}
+
+\def\arraystretch{0.7}%
 
 % you can also define \farsifont, \uighurfont, etc if you want
 \begin{document}
@@ -38,14 +41,6 @@
 %% \SetTranslitConvention{dmg}
 
 %% bi-Asmi al-ll_ahi al-ra.hmAni al-ra.hImi
-
-
-\center{\textarab{BASMALA}}
-
-\begin{tabular}{p{6cm}p{6cm}p{6cm}}
-\textarab{a^skI li-min yA a.hmad}&\textarab[trans]{a^skI li-min yA a.hmad}&I complain to who, O Ahmad?\\
-\textarab{yawm .tal`iti al-ma^shad}&\textarab[trans]{yawm .tal`iti al-ma^shad}&On the day the witnessing rises
-\end{tabular}
 
 
 \begin{arab}
@@ -66,26 +61,78 @@
 \bayt{wa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu dawA'aN lanA}
 \bayt{wa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu amAnaN lanA}
 \end{traditionalpoem}
+\end{arab}
 
+\center{\textarab{BASMALA}}
 
-\center{BASMALA}
+\begin{longtable}{p{5cm}p{5cm}p{8cm}}
+\trans{a^skI li-min yA a.hmad}{Who shall I complain to, O Ahmad?}
+\trans{yawm .tal`iti al-ma^shad}{The day the spectacle rose}
+\trans{wi al-anbiyA' ti^shad}{And the prophets do witness}
+\trans{innak rasUlu al-ll_ah}{That verily you are Messenger of Allah}
+\\
+\trans{law lA a_hAfa al-lUm}{I do not fear anyone's blame}
+\trans{wa a_h^sY `itAba al-qUm}{I do not fear any people holding me to account}
+\trans{lA _hu_d .habIbI dUm}{No! Take me completely, my beloved}
+\trans{hayyim fI .hubbi al-ll_ah}{Completely lost in the love of Allah}
+\\
+\trans{aqsamtu bi-al-furqAn}{I swear by the Furqan}
+\trans{wa bi-sUraTi al-ra.hmAn}{And by Surah Rahman}
+\trans{annI anA al-walhAn}{Verily I am the one lost in love}
+\trans{bi-.hubbi ibni `abdi al-ll_ah}{In the love of the son of Abdullah}
+\\
+\trans{aqsamtu bi-al-a`rAf}{I swear by the A'raf}
+\trans{wa bi-sUraTi al-a.hqAf}{And by Surat al-Ahqaf}
+\trans{yA wa.h^sati al-an.sAf}{Oh the loneliness of separation!}
+\trans{.sAbir li.hukmi al-ll_ah}{Wait for Allah's judgment}
+\\
+\trans{aqsamtu bi-al-.hawAmIn}{I swear by the surahs of Ha Mim}
+\trans{wa bi-sUraTi al-ta.hrIm}{And by Surah Tahrim}
+\trans{annI a.sba.htu saqIm}{That I have become deeply sick}
+\trans{fI .hubbi ibni `abdi al-ll_ah}{In the love of the son of Abdullah}
+\\
+\trans{jabInuka al-wa.d.dA.h}{Your bright radiant forehead}
+\trans{fAq .diyA'i al-mi.sbA.h}{Has exceeded the light of the lamp}
+\trans{bAn al-hawA' fa.d.dA.h}{My love has become shamefully clear}
+\trans{asbY al-`uqUl wa-al-ll_ah}{Has colonized the minds, by Allah}
+\\
+\trans{yA nA`isa al-ajfAn}{Oh you with the sleepy eyelids}
+\trans{yA fAtina al-.guzlAn}{Who tempts the young women}
+\trans{yA mu_hjila al-a.g.sAn}{The one who brings shame to the slender branches}
+\trans{i`.tif ra`Aka al-ll_ah}{Have tenderness, may Allah protect you}
+\\
+\trans{yA kAmila al-zayni}{Oh you who are fully completed in beauty}
+\trans{yA qurraTu al-`ayni}{Who brings the gladness of our eyes}
+\trans{awfI lanA al-dayni}{Complete for us the religion}
+\trans{karramaN li-.haqqi al-ll_ah}{In graciousness for the right of Allah}
+\\
+\trans{yA kAmila al-aw.sAf}{O you who are complete in your attributes}
+\trans{yA layyina al-a`.tAf}{You who are gentle and tender in your inclinations}
+\trans{qalbI li-na.hwaka .tAf}{My heart circles towards you}
+\trans{yA ibni `abdi al-ll_ah}{O son of Abdullah}
+\\
+\trans{ir.ham mu.hibbInak}{Have mercy upon your lovers}
+\trans{`A^sU `alY dInak}{They have lived upon your religion}
+\trans{mA a.hlY sawAd `aynAk}{O how beautiful is the blackness of your eyes}
+\trans{hayyimtanA wa-al-ll_ah}{You've lost us in your love}
+\\
+\trans{ra'aytuhu fI al-nUm}{I witnessed him in my sleep}
+\trans{nizlat dumU`I `Um}{My tears overflowed}
+\trans{yA nAs anA al-ma.hrUm}{O people, I am the one deprived}
+\trans{min .hubbi .habIbi al-ll_ah}{From the love of the beloved of Allah}
+\\
+\trans{ra'aytuhu badaruN}{I witnessed him a full moon}
+\trans{ya.dwI kamA al-qamaru}{Shining brightly like the moon}
+\trans{afdIhi bi-al-`umari}{I sacrifice my life for him}
+\trans{.t_ah_a rasUla al-ll_ah}{Taha the Messenger of Allah}
+\\
+\trans{ra'aytuhu fI al-layl}{I saw him at night}
+\trans{ya_htir kamA al-qandIl}{Gently inclining like a hanging lamp}
+\trans{yA nAs anA al-`alIl}{O people I am the one truly sick}
+\trans{fI .hubbihi wa-al-ll_ah}{In his love and in Allah}
+\end{longtable}
 
-\begin{traditionalpoem}
-\bayt{a^skI li-min yA a.hmad \quad yawm .tal`iti al-ma^shad}{wi al-anbiyA' ti^shad \quad innak rasUlu al-ll_ah}
-\bayt{law lA a_hAfa al-lUm \quad wa a_h^sY `itAba al-qUm}{lA _hu_d .habIbI dUm \quad hayyim fI .hubbi al-ll_ah}
-\bayt{aqsamtu bi-al-furqAn \quad wa bi-sUraTi al-ra.hmAn}{annI anA al-walhAn \quad bi-.hubbi ibni `abdi al-ll_ah}
-\bayt{aqsamtu bi-al-a`rAf \quad wa bi-sUraTi al-a.hqAf}{yA wa.h^sati al-an.sAf \quad .sAbir li.hukmi al-ll_ah}
-\bayt{aqsamtu bi-al-.hawAmIn \quad wa bi-sUraTi al-ta.hrIm}{annI a.sba.htu saqIm \quad fI .hubbi ibni `abdi al-ll_ah}
-\bayt{jabInuka al-wa.d.dA.h \quad fAq .diyA'i al-mi.sbA.h}{bAn al-hawA' fa.d.dA.h \quad asbY al-`uqUl wa-al-ll_ah}
-\bayt{yA nA`isa al-ajfAn \quad yA fAtina al-.guzlAn}{yA mu_hjila al-a.g.sAn \quad i`.tif ra`Aka al-ll_ah}
-\bayt{yA kAmila al-zayni \quad yA qurraTu al-`ayni}{awfI lanA al-dayni \quad karramaN li-.haqqi al-ll_ah}
-\bayt{yA kAmila al-aw.sAf \quad yA layyina al-a`.tAf}{qalbI li-na.hwaka .tAf \quad yA ibni `abdi al-ll_ah}
-\bayt{ir.ham mu.hibbInak \quad `A^sU `alY dInak}{mA a.hlY sawAd `aynAk \quad hayyimtanA wa-al-ll_ah}
-\bayt{ra'aytuhu fI al-nUm \quad nizlat dumU`I `Um}{yA nAs anA al-ma.hrUm \quad min .hubbi .habIbi al-ll_ah}
-\bayt{ra'aytuhu badaruN \quad ya.dwI kamA al-qamaru}{afdIhi bi-al-`umari \quad .t_ah_a rasUla al-ll_ah}
-\bayt{ra'aytuhu fI al-layl \quad ya_htir kamA al-qandIl}{yA nAs anA al-`alIl \quad fI .hubbihi wa-al-ll_ah}
-\end{traditionalpoem}
-
+\begin{arab}
 \center{BASMALA}
 
 \begin{traditionalpoem}
