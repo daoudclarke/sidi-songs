@@ -26,8 +26,10 @@
 
 \newcommand{\w}{\char"0627\char"0610}
 
+\def\baselineset{\lineskiplimit=-\maxdimen \baselineskip=15pt \relax}
 \newcommand{\bayt}[2]{#1&\quad#2\\\textLR{\textarab[trans]{#2}}&\quad\textLR{\textarab[trans]{#1}}\\}
 \newcommand{\trans}[2]{\textarab{#1}&\textarab[trans]{#1}&#2\\}
+\newcommand{\transw}[2]{\noindent\textarab{#1}\hfill\parbox{4cm}{\baselineset \textarab[trans]{#1}}\hfill\parbox{4cm}{\baselineset {#2}}\\}
 
 \def\arraystretch{0.7}%
 
@@ -136,52 +138,52 @@
 
 \center{\textarab{BASMALA}}
 
-\begin{longtable}{llm{5cm}}
-  \trans{al-.salATu `alayka yA nUra ^samsI}{{Prayers be upon you O light of my sun!}}
-  \trans{`adada al-kA'inAti min kulli jinsI}{As many as there are existences of all types}
-  \\
-  \trans{yA rabI`aN bi-al-yumni aqbalta bu^srY}{O spring of good omen, you came as a glad tiding}
-  \trans{lam tazal fIka ayaTuN hiya laka kubrY}{There's still within you the greatest sign}
-\\
-  \trans{hiya a`lY min laylaTi al-qadri qadrA}{It is higher than the Night of Decree}
-  \trans{yA lahA min lawayliTi _dAta unsI}{}
-\\
-  \trans{mawliduN fIhi \w htuzza IwAnu kisrY}{The birth that for him the arch of Cecephanis shook}
-  \trans{wa ra'at ummuhu qu.sUraN li-bu.srY}{And his mother saw the castles in Busra}
-\\
-  \trans{wa .tuyUruN min al-yawAqIti .humrA}{And the birds of emeralds and rubies}
-  \trans{wa atY al-waylu wa al-_tubUru li-fursI}{And truly calamity came to the Persians}
-\\
-  \trans{a.hsanu al-mu.hsinIna fI al-.hasanAti}{The most excellent of the excellent in excellence}
-  \trans{waladu al-.tAhirIna wa al-.tAhirAti}{The son of the purified men and women}
-\\
-  \trans{.tAba li-l-.tayyibIna wa al-.tayyibAti}{He is wholesome to those who are wholesome, men and women}
-  \trans{fidA'uhu abI wa ummI wa nafsI}{I sacrifice my self and my mother and father for him}
-\\
-  \trans{wa yanAdI yawma al-qa.dA'i wa .hukmih}{He is called on the day of judgment and his discernment}
-  \trans{wa qad `ataqnA li-'ajli sayyidi qawmih}{And we have been set free from the fire for the sake of the master of his people}
-\\
-  \trans{min la.zA kulla man tasammY bi-'ismih}{}
-  \trans{h_aka_dA .sa.h.ha `an ma^sAyi_hi darsI}{}
-\\
-  \trans{yA ilAhI yA man biyadihi al-_hayru kulluh}{O my God in whose hand is complete goodness}
-  \trans{bi-al-rasUli alla_dI tabayyana fa.dluh}{By your Messenger whose bounty upon us has become clear}
-\\
-  \trans{jud `alY jam`inA bimA anta ahluh}{Overflow in Your generosity upon our gathering here as only You can}
-  \trans{na.hnu na_h^sY bimA janaynA bi-'amsI}{We are fearful of what we committed of sin yesterday}
-\\
-  \trans{yA rasUla al-'il_ahi yA _hayra hAdI}{O Messenger of The God, you are the best of Guides}
-  \trans{yA nabiyya al-hudY `alayka \w `timAdI}{O Prophet of guidance, upon you is my reliance}
-\\
-  \trans{kun ^safI`I fI .gurbatI wa \w nfirAdI}{Be my intercessor in my exile and in my seclusion}
-  \trans{sayyamA laylata \w tti.sAlI bi-ramsI}{Particularly at the night of my communion}
-\\
-  \trans{wa .salATu al-ll_ahi ma`a ta.hiyyati rabbI}{And the prayers of Allah and the greetings of my Lord}
-  \trans{tuhdA li-lnabiyyi al-hA^simI wa .sa.hbih}{Are gifted to the Hashimi Prophet and his companions}
-\\
-  \trans{mA tarannama .tA'ir min fawqa qudsI}{As long as a bird flies in exaltation above the sanctified place}
-  \trans{`adada al-kA'inAti min kulli jinsI}{As many as the creatures of every type}
-\end{longtable}
+%% \begin{longtable}{llm{5cm}}
+  \transw{al-.salATu `alayka yA nUra ^samsI}{{Prayers be upon you O light of my sun!}}
+  \transw{`adada al-kA'inAti min kulli jinsI}{As many as there are existences of all types}
+  
+  \transw{yA rabI`aN bi-al-yumni aqbalta bu^srY}{O spring of good omen, you came as a glad tiding}
+  \transw{lam tazal fIka ayaTuN hiya laka kubrY}{There's still within you the greatest sign}
+
+  \transw{hiya a`lY min laylaTi al-qadri qadrA}{It is higher than the Night of Decree}
+  \transw{yA lahA min lawayliTi _dAta unsI}{}
+
+  \transw{mawliduN fIhi \w htuzza IwAnu kisrY}{The birth that for him the arch of Cecephanis shook}
+  \transw{wa ra'at ummuhu qu.sUraN li-bu.srY}{And his mother saw the castles in Busra}
+
+  \transw{wa .tuyUruN min al-yawAqIti .humrA}{And the birds of emeralds and rubies}
+  \transw{wa atY al-waylu wa al-_tubUru li-fursI}{And truly calamity came to the Persians}
+
+  \transw{a.hsanu al-mu.hsinIna fI al-.hasanAti}{The most excellent of the excellent in excellence}
+  \transw{waladu al-.tAhirIna wa al-.tAhirAti}{The son of the purified men and women}
+
+  \transw{.tAba li-l-.tayyibIna wa al-.tayyibAti}{He is wholesome to those who are wholesome, men and women}
+  \transw{fidA'uhu abI wa ummI wa nafsI}{I sacrifice my self and my mother and father for him}
+
+  \transw{wa yanAdI yawma al-qa.dA'i wa .hukmih}{He is called on the day of judgment and his discernment}
+  \transw{wa qad `ataqnA li-'ajli sayyidi qawmih}{And we have been set free from the fire for the sake of the master of his people}
+
+  \transw{min la.zA kulla man tasammY bi-'ismih}{}
+  \transw{h_aka_dA .sa.h.ha `an ma^sAyi_hi darsI}{}
+
+  \transw{yA ilAhI yA man biyadihi al-_hayru kulluh}{O my God in whose hand is complete goodness}
+  \transw{bi-al-rasUli alla_dI tabayyana fa.dluh}{By your Messenger whose bounty upon us has become clear}
+
+  \transw{jud `alY jam`inA bimA anta ahluh}{Overflow in Your generosity upon our gathering here as only You can}
+  \transw{na.hnu na_h^sY bimA janaynA bi-'amsI}{We are fearful of what we committed of sin yesterday}
+
+  \transw{yA rasUla al-'il_ahi yA _hayra hAdI}{O Messenger of The God, you are the best of Guides}
+  \transw{yA nabiyya al-hudY `alayka \w `timAdI}{O Prophet of guidance, upon you is my reliance}
+
+  \transw{kun ^safI`I fI .gurbatI wa \w nfirAdI}{Be my intercessor in my exile and in my seclusion}
+  \transw{sayyamA laylata \w tti.sAlI bi-ramsI}{Particularly at the night of my communion}
+
+  \transw{wa .salATu al-ll_ahi ma`a ta.hiyyati rabbI}{And the prayers of Allah and the greetings of my Lord}
+  \transw{tuhdA li-lnabiyyi al-hA^simI wa .sa.hbih}{Are gifted to the Hashimi Prophet and his companions}
+
+  \transw{mA tarannama .tA'ir min fawqa qudsI}{As long as a bird flies in exaltation above the sanctified place}
+  \transw{`adada al-kA'inAti min kulli jinsI}{As many as the creatures of every type}
+%% \end{longtable}
 
 
 \begin{arab}
