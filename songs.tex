@@ -2,6 +2,8 @@
 
 \documentclass{minimal}
 \usepackage{longtable}
+\usepackage{makecell}
+\usepackage{array}
 \usepackage[voc]{arabxetex} % default option is "novoc"
                        % other options are "voc", "fullvoc", "utf" and "trans"
 % arabxetex loads bidi.sty and fontspec.sty		       
@@ -132,28 +134,57 @@
 \trans{fI .hubbihi wa-al-ll_ah}{In his love and in Allah}
 \end{longtable}
 
+\center{\textarab{BASMALA}}
+
+\begin{longtable}{llm{5cm}}
+  \trans{al-.salATu `alayka yA nUra ^samsI}{{Prayers be upon you O light of my sun!}}
+  \trans{`adada al-kA'inAti min kulli jinsI}{As many as there are existences of all types}
+  \\
+  \trans{yA rabI`aN bi-al-yumni aqbalta bu^srY}{O spring of good omen, you came as a glad tiding}
+  \trans{lam tazal fIka ayaTuN hiya laka kubrY}{There's still within you the greatest sign}
+\\
+  \trans{hiya a`lY min laylaTi al-qadri qadrA}{It is higher than the Night of Decree}
+  \trans{yA lahA min lawayliTi _dAta unsI}{}
+\\
+  \trans{mawliduN fIhi \w htuzza IwAnu kisrY}{The birth that for him the arch of Cecephanis shook}
+  \trans{wa ra'at ummuhu qu.sUraN li-bu.srY}{And his mother saw the castles in Busra}
+\\
+  \trans{wa .tuyUruN min al-yawAqIti .humrA}{And the birds of emeralds and rubies}
+  \trans{wa atY al-waylu wa al-_tubUru li-fursI}{And truly calamity came to the Persians}
+\\
+  \trans{a.hsanu al-mu.hsinIna fI al-.hasanAti}{The most excellent of the excellent in excellence}
+  \trans{waladu al-.tAhirIna wa al-.tAhirAti}{The son of the purified men and women}
+\\
+  \trans{.tAba li-l-.tayyibIna wa al-.tayyibAti}{He is wholesome to those who are wholesome, men and women}
+  \trans{fidA'uhu abI wa ummI wa nafsI}{I sacrifice my self and my mother and father for him}
+\\
+  \trans{wa yanAdI yawma al-qa.dA'i wa .hukmih}{He is called on the day of judgment and his discernment}
+  \trans{wa qad `ataqnA li-'ajli sayyidi qawmih}{And we have been set free from the fire for the sake of the master of his people}
+\\
+  \trans{min la.zA kulla man tasammY bi-'ismih}{}
+  \trans{h_aka_dA .sa.h.ha `an ma^sAyi_hi darsI}{}
+\\
+  \trans{yA ilAhI yA man biyadihi al-_hayru kulluh}{O my God in whose hand is complete goodness}
+  \trans{bi-al-rasUli alla_dI tabayyana fa.dluh}{By your Messenger whose bounty upon us has become clear}
+\\
+  \trans{jud `alY jam`inA bimA anta ahluh}{Overflow in Your generosity upon our gathering here as only You can}
+  \trans{na.hnu na_h^sY bimA janaynA bi-'amsI}{We are fearful of what we committed of sin yesterday}
+\\
+  \trans{yA rasUla al-'il_ahi yA _hayra hAdI}{O Messenger of The God, you are the best of Guides}
+  \trans{yA nabiyya al-hudY `alayka \w `timAdI}{O Prophet of guidance, upon you is my reliance}
+\\
+  \trans{kun ^safI`I fI .gurbatI wa \w nfirAdI}{Be my intercessor in my exile and in my seclusion}
+  \trans{sayyamA laylata \w tti.sAlI bi-ramsI}{Particularly at the night of my communion}
+\\
+  \trans{wa .salATu al-ll_ahi ma`a ta.hiyyati rabbI}{And the prayers of Allah and the greetings of my Lord}
+  \trans{tuhdA li-lnabiyyi al-hA^simI wa .sa.hbih}{Are gifted to the Hashimi Prophet and his companions}
+\\
+  \trans{mA tarannama .tA'ir min fawqa qudsI}{As long as a bird flies in exaltation above the sanctified place}
+  \trans{`adada al-kA'inAti min kulli jinsI}{As many as the creatures of every type}
+\end{longtable}
+
+
 \begin{arab}
-\center{BASMALA}
-
-\begin{traditionalpoem}
-\bayt{al-.salATu `alayka yA nUra ^samsI}{`adada al-kA'inAti min kulli jinsI}
-\bayt{yA rabI`aN bi-al-yumni aqbalta bu^srY}{lam tazal fIka ayaTuN hiya laka kubrY}
-\bayt{hiya a`lY min laylaTi al-qadri qadrA}{yA lahA min lawayliTi _dAta unsI}
-\bayt{mawliduN fIhi \w htuzza IwAnu kisrY}{wa ra'at ummuhu qu.sUraN li-bu.srY}
-\bayt{wa .tuyUruN min al-yawAqIti .humrA}{wa atY al-waylu wa al-_tubUru li-fursI}
-\bayt{a.hsanu al-mu.hsinIna fI al-.hasanAti}{waladu al-.tAhirIna wa al-.tAhirAti}
-\bayt{.tAba li-l-.tayyibIna wa al-.tayyibAti}{fidA'uhu abI wa ummI wa nafsI}
-\bayt{wa yanAdI yawma al-qa.dA'i wa .hukmih}{wa qad `ataqnA li-'ajli sayyidi qawmih}
-\bayt{min la.zA kulla man tasammY bi-'ismih}{h_aka_dA .sa.h.ha `an ma^sAyi_hi darsI}
-\bayt{yA ilAhI yA man biyadihi al-_hayru kulluh}{bi-al-rasUli alla_dI tabayyana fa.dluh}
-\bayt{jud `alY jam`inA bimA anta ahluh}{na.hnu na_h^sY bimA janaynA bi-'amsI}
-\bayt{yA rasUla al-'il_ahi yA _hayra hAdI}{yA nabiyya al-hudY `alayka \w `timAdI}
-\bayt{kun ^safI`I fI .gurbatI wa \w nfirAdI}{sayyamA laylata \w tti.sAlI bi-ramsI}
-\bayt{wa .salATu al-ll_ahi ma`a ta.hiyyati rabbI}{tuhdA li-lnabiyyi al-hA^simI wa .sa.hbih}
-\bayt{mA tarannama .tA'ir min fawqa qudsI}{`adada al-kA'inAti min kulli jinsI}
-\end{traditionalpoem}
-
-
 \center{BASMALA}
 
 \begin{traditionalpoem}
