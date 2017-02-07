@@ -29,7 +29,9 @@
 \def\baselineset{\lineskiplimit=-\maxdimen \baselineskip=15pt \relax}
 \newcommand{\bayt}[2]{#1&\quad#2\\\textLR{\textarab[trans]{#2}}&\quad\textLR{\textarab[trans]{#1}}\\}
 \newcommand{\trans}[2]{\textarab{#1}&\textarab[trans]{#1}&#2\\}
-\newcommand{\transw}[2]{\noindent\textarab{#1}\hfill\parbox{4cm}{\baselineset \textarab[trans]{#1}}\hfill\parbox{4cm}{\baselineset {#2}}\\}
+\newcommand{\transw}[2]{\noindent\textarab{#1}&\baselineset \textarab[trans]{#1}&\baselineset {#2}\\}
+
+\setlength{\tabcolsep}{12pt}
 
 \def\arraystretch{0.7}%
 
@@ -138,7 +140,7 @@
 
 \center{\textarab{BASMALA}}
 
-%% \begin{longtable}{llm{5cm}}
+\begin{longtable}{lp{4cm}p{4cm}}
   \transw{al-.salATu `alayka yA nUra ^samsI}{{Prayers be upon you O light of my sun!}}
   \transw{`adada al-kA'inAti min kulli jinsI}{As many as there are existences of all types}
   
@@ -183,7 +185,7 @@
 
   \transw{mA tarannama .tA'ir min fawqa qudsI}{As long as a bird flies in exaltation above the sanctified place}
   \transw{`adada al-kA'inAti min kulli jinsI}{As many as the creatures of every type}
-%% \end{longtable}
+\end{longtable}
 
 
 \begin{arab}
