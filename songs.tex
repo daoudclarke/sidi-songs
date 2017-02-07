@@ -1,6 +1,11 @@
-% XeLaTeX 
-
+% XeLaTeX
 \documentclass{minimal}
+\pdfpagewidth=\paperwidth
+\pdfpageheight=\paperheight
+
+\usepackage[a5paper,margin=0.5cm]{geometry}
+
+%% \documentclass{minimal}
 \usepackage{longtable}
 \usepackage{makecell}
 \usepackage{array}
@@ -20,7 +25,7 @@
 
 \listfiles
  
-\newfontfamily\arabicfont[Script=Arabic,Scale=2]{Amiri}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.7]{Amiri}
 
 %% \renewcommand\baytwidth{0.25\textwidth}
 
@@ -29,9 +34,9 @@
 \def\baselineset{\lineskiplimit=-\maxdimen \baselineskip=15pt \relax}
 \newcommand{\bayt}[2]{#1&\quad#2\\\textLR{\textarab[trans]{#2}}&\quad\textLR{\textarab[trans]{#1}}\\}
 \newcommand{\trans}[2]{\textarab{#1}&\textarab[trans]{#1}&#2\\}
-\newcommand{\transw}[2]{\noindent\textarab{#1}&\baselineset \textarab[trans]{#1}&\baselineset {#2}\\}
+\newcommand{\transw}[2]{\textarab{#1}&\baselineset\textarab[trans]{#1}&\baselineset{#2}\\}
 
-\setlength{\tabcolsep}{12pt}
+\setlength{\tabcolsep}{6pt}
 
 \def\arraystretch{0.7}%
 
@@ -140,10 +145,10 @@
 
 \center{\textarab{BASMALA}}
 
-\begin{longtable}{lp{4cm}p{4cm}}
+\begin{longtable}{p{6cm}p{3cm}p{3cm}}
   \transw{al-.salATu `alayka yA nUra ^samsI}{{Prayers be upon you O light of my sun!}}
   \transw{`adada al-kA'inAti min kulli jinsI}{As many as there are existences of all types}
-  
+
   \transw{yA rabI`aN bi-al-yumni aqbalta bu^srY}{O spring of good omen, you came as a glad tiding}
   \transw{lam tazal fIka ayaTuN hiya laka kubrY}{There's still within you the greatest sign}
 
@@ -196,6 +201,7 @@
   \bayt{wa kullu amriN hammanA}{yahUnu bi-\w smika yA `a.zIm}
   \bayt{yA rabbanA bi-al-fAti.haT}{wa bi-al-rijAli al-.sAli.haT}
   \bayt{ij`al umUrunA nAji.haT}{na.hnu wa kulli al-muslimIn}
+
 \end{traditionalpoem}
 
 \end{arab}
