@@ -1,0 +1,286 @@
+% XeLaTeX
+\documentclass{minimal}
+\pdfpagewidth=\paperwidth
+\pdfpageheight=\paperheight
+
+\usepackage[a5paper,margin=0.5cm]{geometry}
+
+%% \documentclass{minimal}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage[voc]{arabxetex} % default option is "novoc"
+                       % other options are "voc", "fullvoc", "utf" and "trans"
+% arabxetex loads bidi.sty and fontspec.sty		       
+
+\usepackage{bidipoem}
+
+\setmainfont{Linux Libertine}
+
+%% \makeatletter
+%% \def\Allah{\begingroup\allahfont\char"FDF2\endgroup}
+%% \makeatother
+
+\linespread{5}
+
+\listfiles
+ 
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.7]{Amiri}
+
+%% \renewcommand\baytwidth{0.25\textwidth}
+
+\newcommand{\w}{\char"0627\char"0610}
+
+\def\baselineset{\lineskiplimit=-\maxdimen \baselineskip=15pt \relax}
+\newcommand{\bayt}[2]{#1&\quad#2\\\textLR{\textarab[trans]{#2}}&\quad\textLR{\textarab[trans]{#1}}\\}
+\newcommand{\trans}[2]{\textarab{#1}&\textarab[trans]{#1}&#2\\}
+\newcommand{\transw}[2]{\textarab{#1}&\baselineset\textarab[trans]{#1}&\baselineset{#2}\\}
+
+\setlength{\tabcolsep}{6pt}
+
+\def\arraystretch{0.7}%
+
+% you can also define \farsifont, \uighurfont, etc if you want
+\begin{document}
+
+%% This is some text in English with Arabic insertion \textarab{`arabI}.
+
+%% This is some text in English with Arabic insertion \textarab[utf]{عربي}.
+
+%% This is some text in English with Arabic insertion \textarab[voc]{`arabI}.
+
+%% \SetTranslitConvention{dmg}
+
+%% bi-Asmi al-ll_ahi al-ra.hmAni al-ra.hImi
+
+
+
+\center{\textarab{BASMALA}}
+
+\begin{longtable}{p{6cm}p{3cm}p{3cm}}
+  \transw{yA nafsu .gIbI `an siwY al-ra.hm_ani}{Oh soul withdraw from other than the Merciful}
+  \transw{wa .tIbI nafsaN min .safY al-'al.hAni}{And delight in the purity of the melody}
+  \transw{al-qalbu .sallY mubhilAN ilA al-ll_ahi}{The heart prays freely to Allah}
+  \transw{wa al-wajhu wallY `u.sbaTu al-'al.hAni}{The face turns tied to the melody}
+  \transw{wa `alY al-sam`i `u.sbaTu al-'al.hAni}{}
+  
+
+%%   \transw{al-ll_ahu al-ll_ahu al-ll_ahu al-ll_ah}{}
+%% \transw{al-ll_ahu al-ll_ah lA il_aha illA al-ll_ah}{}
+%% \transw{ata"InAka bi-al-faqri yA _dA al-.ginY}{}
+%% \transw{fa-anta alla_d"I lam tazal mu.hsinA}{}
+%% \transw{wa `awadtanA kulla fa.dliN `asY}{}
+%% \transw{yadUmu alla_d"I minka `awadtanA}{}
+%% \transw{masAkInuka al-^su`_du qad wulihU"A}{}
+%% \transw{bi-.hubbika i_d huwa aq.sY al-munY}{}
+%% \transw{i_dA kunta fI kulli .hAliN ma`I}{}
+%% \transw{fa-`an .hamli zAdI anA fI .ginY}{}
+%% \transw{ra'aynAka fI kulli amriN badA}{}
+%% \transw{wa laysa min al-amri ^say'uN lanA}{}
+%% \transw{satartu \w smakum .gIraTaN hA anA}{}
+%% \transw{umawwihu bi-al^sa`bi wa-almun.hanY}{}
+%% \transw{fa-mA a.haduN fI al-.ginY mi_tlukum}{}
+%% \transw{wa fI al-faqri lA a.haduN mi_tlunA}{}
+%% \transw{fa-'antum huwa al-.haqqu lA .gayrakum}{}
+%% \transw{fa-yA layta ^si`rI anA man anA}{}
+%% \transw{fa-yA rabbi .salli `alY al-mu.s.tafY}{}
+%% \transw{.salATaN takUnu ^sifA'aN lanA}{}
+%% \transw{wa-yA rabbi .salli `alY al-mu.s.tafY}{}
+%% \transw{.salATaN takUnu dawA'aN lanA}{}
+%% \transw{wa-yA rabbi .salli `alY al-mu.s.tafY}{}
+%% \transw{.salATaN takUnu amAnaN lanA}{}
+\end{longtable}
+
+%% \center{\textarab{BASMALA}}
+
+%% \begin{longtable}{p{4cm}p{4cm}p{4cm}}
+%% \transw{a^skI li-min yA a.hmad}{Who shall I complain to, O Ahmad?}
+%% \transw{yawm .tal`iti al-ma^shad}{The day the spectacle rose}
+%% \transw{wi al-anbiyA' ti^shad}{And the prophets do witness}
+%% \transw{innak rasUlu al-ll_ah}{That verily you are Messenger of Allah}
+%% \\
+%% \transw{law lA a_hAfa al-lUm}{I do not fear anyone's blame}
+%% \transw{wa a_h^sY `itAba al-qUm}{I do not fear any people holding me to account}
+%% \transw{lA _hu_d .habIbI dUm}{No! Take me completely, my beloved}
+%% \transw{hayyim fI .hubbi al-ll_ah}{Completely lost in the love of Allah}
+%% \\
+%% \transw{aqsamtu bi-al-furqAn}{I swear by the Furqan}
+%% \transw{wa bi-sUraTi al-ra.hmAn}{And by Surah Rahman}
+%% \transw{annI anA al-walhAn}{Verily I am the one lost in love}
+%% \transw{bi-.hubbi ibni `abdi al-ll_ah}{In the love of the son of Abdullah}
+%% \\
+%% \transw{aqsamtu bi-al-a`rAf}{I swear by the A'raf}
+%% \transw{wa bi-sUraTi al-a.hqAf}{And by Surat al-Ahqaf}
+%% \transw{yA wa.h^sati al-an.sAf}{Oh the loneliness of separation!}
+%% \transw{.sAbir li.hukmi al-ll_ah}{Wait for Allah's judgment}
+%% \\
+%% \transw{aqsamtu bi-al-.hawAmIn}{I swear by the surahs of Ha Mim}
+%% \transw{wa bi-sUraTi al-ta.hrIm}{And by Surah Tahrim}
+%% \transw{annI a.sba.htu saqIm}{That I have become deeply sick}
+%% \transw{fI .hubbi ibni `abdi al-ll_ah}{In the love of the son of Abdullah}
+%% \\
+%% \transw{jabInuka al-wa.d.dA.h}{Your bright radiant forehead}
+%% \transw{fAq .diyA'i al-mi.sbA.h}{Has exceeded the light of the lamp}
+%% \transw{bAn al-hawA' fa.d.dA.h}{My love has become shamefully clear}
+%% \transw{asbY al-`uqUl wa-al-ll_ah}{Has colonized the minds, by Allah}
+%% \\
+%% \transw{yA nA`isa al-ajfAn}{Oh you with the sleepy eyelids}
+%% \transw{yA fAtina al-.guzlAn}{Who tempts the young women}
+%% \transw{yA mu_hjila al-a.g.sAn}{The one who brings shame to the slender branches}
+%% \transw{i`.tif ra`Aka al-ll_ah}{Have tenderness, may Allah protect you}
+%% \\
+%% \transw{yA kAmila al-zayni}{Oh you who are fully completed in beauty}
+%% \transw{yA qurraTu al-`ayni}{Who brings the gladness of our eyes}
+%% \transw{awfI lanA al-dayni}{Complete for us the religion}
+%% \transw{karramaN li-.haqqi al-ll_ah}{In graciousness for the right of Allah}
+%% \\
+%% \transw{yA kAmila al-aw.sAf}{O you who are complete in your attributes}
+%% \transw{yA layyina al-a`.tAf}{You who are gentle and tender in your inclinations}
+%% \transw{qalbI li-na.hwaka .tAf}{My heart circles towards you}
+%% \transw{yA ibni `abdi al-ll_ah}{O son of Abdullah}
+%% \\
+%% \transw{ir.ham mu.hibbInak}{Have mercy upon your lovers}
+%% \transw{`A^sU `alY dInak}{They have lived upon your religion}
+%% \transw{mA a.hlY sawAd `aynAk}{O how beautiful is the blackness of your eyes}
+%% \transw{hayyimtanA wa-al-ll_ah}{You've lost us in your love}
+%% \\
+%% \transw{ra'aytuhu fI al-nUm}{I witnessed him in my sleep}
+%% \transw{nizlat dumU`I `Um}{My tears overflowed}
+%% \transw{yA nAs anA al-ma.hrUm}{O people, I am the one deprived}
+%% \transw{min .hubbi .habIbi al-ll_ah}{From the love of the beloved of Allah}
+%% \\
+%% \transw{ra'aytuhu badaruN}{I witnessed him a full moon}
+%% \transw{ya.dwI kamA al-qamaru}{Shining brightly like the moon}
+%% \transw{afdIhi bi-al-`umari}{I sacrifice my life for him}
+%% \transw{.t_ah_a rasUla al-ll_ah}{Taha the Messenger of Allah}
+%% \\
+%% \transw{ra'aytuhu fI al-layl}{I saw him at night}
+%% \transw{ya_htir kamA al-qandIl}{Gently inclining like a hanging lamp}
+%% \transw{yA nAs anA al-`alIl}{O people I am the one truly sick}
+%% \transw{fI .hubbihi wa-al-ll_ah}{In his love and in Allah}
+%% \end{longtable}
+
+%% \center{\textarab{BASMALA}}
+
+%% \begin{longtable}{p{6cm}p{3cm}p{3cm}}
+%%   \transw{al-.salATu `alayka yA nUra ^samsI}{Prayers be upon you O light of my sun!}
+%%   \transw{`adada al-kA'inAti min kulli jinsI}{As many as there are existences of all types}
+
+%%   \transw{yA rabI`aN bi-al-yumni aqbalta bu^srY}{O spring of good omen, you came as a glad tiding}
+%%   \transw{lam tazal fIka ayaTuN hiya laka kubrY}{There's still within you the greatest sign}
+
+%%   \transw{hiya a`lY min laylaTi al-qadri qadrA}{It is higher than the Night of Decree}
+%%   \transw{yA lahA min lawayliTi _dAta unsI}{}
+
+%%   \transw{mawliduN fIhi \w htuzza IwAnu kisrY}{The birth that for him the arch of Cecephanis shook}
+%%   \transw{wa ra'at ummuhu qu.sUraN li-bu.srY}{And his mother saw the castles in Busra}
+
+%%   \transw{wa .tuyUruN min al-yawAqIti .humrA}{And the birds of emeralds and rubies}
+%%   \transw{wa atY al-waylu wa al-_tubUru li-fursI}{And truly calamity came to the Persians}
+
+%%   \transw{a.hsanu al-mu.hsinIna fI al-.hasanAti}{The most excellent of the excellent in excellence}
+%%   \transw{waladu al-.tAhirIna wa al-.tAhirAti}{The son of the purified men and women}
+
+%%   \transw{.tAba li-l-.tayyibIna wa al-.tayyibAti}{He is wholesome to those who are wholesome, men and women}
+%%   \transw{fidA'uhu abI wa ummI wa nafsI}{I sacrifice my self and my mother and father for him}
+
+%%   \transw{wa yanAdI yawma al-qa.dA'i wa .hukmih}{He is called on the day of judgment and his discernment}
+%%   \transw{wa qad `ataqnA li-'ajli sayyidi qawmih}{And we have been set free from the fire for the sake of the master of his people}
+
+%%   \transw{min la.zA kulla man tasammY bi-'ismih}{}
+%%   \transw{h_aka_dA .sa.h.ha `an ma^sAyi_hi darsI}{}
+
+%%   \transw{yA ilAhI yA man biyadihi al-_hayru kulluh}{O my God in whose hand is complete goodness}
+%%   \transw{bi-al-rasUli alla_dI tabayyana fa.dluh}{By your Messenger whose bounty upon us has become clear}
+
+%%   \transw{jud `alY jam`inA bimA anta ahluh}{Overflow in Your generosity upon our gathering here as only You can}
+%%   \transw{na.hnu na_h^sY bimA janaynA bi-'amsI}{We are fearful of what we committed of sin yesterday}
+
+%%   \transw{yA rasUla al-'il_ahi yA _hayra hAdI}{O Messenger of The God, you are the best of Guides}
+%%   \transw{yA nabiyya al-hudY `alayka \w `timAdI}{O Prophet of guidance, upon you is my reliance}
+
+%%   \transw{kun ^safI`I fI .gurbatI wa \w nfirAdI}{Be my intercessor in my exile and in my seclusion}
+%%   \transw{sayyamA laylata \w tti.sAlI bi-ramsI}{Particularly at the night of my communion}
+
+%%   \transw{wa .salATu al-ll_ahi ma`a ta.hiyyati rabbI}{And the prayers of Allah and the greetings of my Lord}
+%%   \transw{tuhdA li-lnabiyyi al-hA^simI wa .sa.hbih}{Are gifted to the Hashimi Prophet and his companions}
+
+%%   \transw{mA tarannama .tA'ir min fawqa qudsI}{As long as a bird flies in exaltation above the sanctified place}
+%%   \transw{`adada al-kA'inAti min kulli jinsI}{As many as the creatures of every type}
+%% \end{longtable}
+
+
+%% \center{\textarab{BASMALA}}
+
+%% \begin{longtable}{p{6cm}p{3cm}p{3cm}}
+%%   \transw{all_ah yA `a.zIm anta al-`a.zIm}{}
+%%   \transw{qad hammanA amruN `a.zIm}{}
+%%   \transw{wa kullu amriN hammanA}{}
+%%   \transw{yahUnu bi-\w smika yA `a.zIm}{}
+
+%%   \transw{yA rabbanA bi-al-fAti.haT}{}
+%%   \transw{wa bi-al-rijAli al-.sAli.haT}{}
+%%   \transw{ij`al umUrunA nAji.haT}{}
+%%   \transw{na.hnu wa kulli al-muslimIn}{}
+
+%%   \transw{yA rabbanA bi-al-baqaraT}{}
+%%   \transw{wa bi-al-rijAli al-`a^saraT}{}
+%%   \transw{ij`al umUrunA maysiraT}{}
+%%   \transw{na.hnu wa kulli al-muslimIn}{}
+
+%%   \transw{yA rabbanA bi-al-mA'idaT}{}
+%%   \transw{wa bi-al-rijAli al-zAhidaT}{}
+%%   \transw{ij`al umUrunA ra^sidaT}{}
+%%   \transw{na.hnu wa kulli al-muslimIn}{}
+
+%%   %% \transw{yA rabbanA bi-al-.sAli.hIn}{}
+%%   %% \transw{wa bi-al-rijAli al-arba`In}{}
+%%   %% \transw{ij`al umUrunA ra^sidaT}{}
+%%   %% \transw{na.hnu wa kulli al-muslimIn}{}
+
+%%   \transw{yA rabbanA bi-al-wAqi`aT}{}
+%%   \transw{wa bi-al-rijAli al-arba`aT}{}
+%%   \transw{ij`al umUrunA wAsi`aT}{}
+%%   \transw{na.hnu wa kulli al-muslimIn}{}
+  
+%% \end{longtable}
+
+%% \pagebreak
+%% \center{\textarab{BASMALA}}
+
+%% \begin{longtable}{p{4cm}p{6cm}p{3cm}}
+%%   \transw{al-ll_ahu yA al-ll_ah}{}
+%%   \transw{al-ll_ahu yA al-ll_ah}{}
+%%   \transw{al-ll_ahu yA al-ll_ah}{}
+%%   \transw{al-ll_ahu yA al-ll_ah}{}
+%%   \\
+%%   \transw{`alayka .salla al-ll_ah}{}
+%%   \transw{yA _hayra _halqi al-ll_ah}{}
+%%   \transw{wa-al-'Ali wa-al-'a.s.hAb}{}
+%%   \transw{wa-al-qawmi ahli al-ll_ah}{}
+%% \pagebreak
+%%   \transw{liwA'uka al-marfU`}{}
+%%   \transw{wa qawluka al-masmU`}{}
+%%   \transw{wa .hubbaka al-ma.tbU`}{}
+%%   \transw{fI mahjati al-'awAh}{}
+%%   \\
+%%   \transw{yA man lahu al-burhAn}{}
+%%   \transw{wa _hulquhu al-qur'An}{}
+%%   \transw{mA kAnati al-'akwAn}{}
+%%   \transw{wa .haqqihi lawlAh}{}
+%% \pagebreak
+%%   \transw{fidA'uka al-'arwA.h}{}
+%%   \transw{wa mi_tluhA al-'a^sbA.h}{}
+%%   \transw{yA _hIrati al-fattA.h}{}
+%%   \transw{min anbiyA'i al-ll_ah}{}
+%%   \\
+%%   \transw{ad`Uka bi-al-sib.tayn}{}
+%%   \transw{li-ka^sfi h_a_dA al-.gayn}{}
+%%   \transw{yA malja'a al-kawnayn}{}
+%%   \transw{fI al-_ha.tbi ba`da al-ll_ah}{}
+%% \end{longtable}
+
+
+
+\end{document}
+

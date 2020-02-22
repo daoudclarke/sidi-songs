@@ -1,0 +1,91 @@
+% XeLaTeX
+\documentclass{minimal}
+\pdfpagewidth=\paperwidth
+\pdfpageheight=\paperheight
+
+\usepackage[a4paper,margin=0.5cm]{geometry}
+
+%% \documentclass{minimal}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage[voc]{arabxetex} % default option is "novoc"
+                       % other options are "voc", "fullvoc", "utf" and "trans"
+% arabxetex loads bidi.sty and fontspec.sty		       
+
+\usepackage{bidipoem}
+
+\setmainfont{Linux Libertine}
+
+%% \makeatletter
+%% \def\Allah{\begingroup\allahfont\char"FDF2\endgroup}
+%% \makeatother
+
+\linespread{5}
+
+\listfiles
+ 
+\newfontfamily\arabicfont[Script=Arabic,Scale=2]{Amiri}
+
+%% \renewcommand\baytwidth{0.25\textwidth}
+
+\newcommand{\w}{\char"0627\char"0610}
+
+\def\baselineset{\lineskiplimit=-\maxdimen \baselineskip=15pt \relax}
+\newcommand{\bayt}[2]{#1&\quad#2\\\textLR{\textarab[trans]{#2}}&\quad\textLR{\textarab[trans]{#1}}\\}
+\newcommand{\trans}[2]{\textarab{#1}&\textarab[trans]{#1}&#2\\}
+\newcommand{\transw}[2]{\textarab{#1}&\baselineset\textarab[trans]{#1}&\baselineset{#2}\\}
+
+\setlength{\tabcolsep}{6pt}
+
+\def\arraystretch{0.7}%
+
+% you can also define \farsifont, \uighurfont, etc if you want
+\begin{document}
+
+%% This is some text in English with Arabic insertion \textarab{`arabI}.
+
+%% This is some text in English with Arabic insertion \textarab[utf]{عربي}.
+
+%% This is some text in English with Arabic insertion \textarab[voc]{`arabI}.
+
+%% \SetTranslitConvention{dmg}
+
+%% bi-Asmi al-ll_ahi al-ra.hmAni al-ra.hImi
+
+
+
+
+\begin{arab}
+\center{BASMALA}
+\begin{traditionalpoem}
+  al-ll_ahu yA al-ll_ah
+  al-ll_ahu yA al-ll_ah &\quad
+  al-ll_ahu yA al-ll_ah
+  al-ll_ahu yA al-ll_ah\\
+  `alayka .salla al-ll_ah
+  yA _hayra _halqi al-ll_ah &\quad
+  wa-al-'Ali wa-al-'a.s.hAb
+  wa-al-qawmi ahli al-ll_ah\\
+  liwA'uka al-marfU`
+  wa qawluka al-masmU` &\quad
+  wa .hubbaka al-ma.tbU`
+  fI mahjati al-'awAh\\
+  yA man lahu al-burhAn
+  wa _hulquhu al-qur'An &\quad
+  mA kAnati al-'akwAn
+  wa .haqqihi lawlAh\\
+  fidA'uka al-'arwA.h
+  wa mi_tluhA al-'a^sbA.h &\quad
+  yA _hIrati al-fattA.h
+  min anbiyA'i al-ll_ah\\
+  ad`Uka bi-al-sib.tayn
+  li-ka^sfi h_a_dA al-.gayn &\quad
+  yA malja'a al-kawnayn
+  fI al-_ha.tbi ba`da al-ll_ah
+\end{traditionalpoem}
+\end{arab}
+
+
+\end{document}
+

@@ -1,0 +1,121 @@
+% XeLaTeX 
+
+\documentclass{minimal}
+\usepackage[fullvoc]{arabxetex} % default option is "novoc"
+                       % other options are "voc", "fullvoc", "utf" and "trans"
+% arabxetex loads bidi.sty and fontspec.sty		       
+
+\setmainfont{Linux Libertine}
+
+%% \makeatletter
+%% \def\Allah{\begingroup\allahfont\char"FDF2\endgroup}
+%% \makeatother
+
+
+
+\listfiles
+ 
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+% you can also define \farsifont, \uighurfont, etc if you want
+\begin{document}
+%% This is some text in English with Arabic insertion \textarab{`arabI}.
+
+%% This is some text in English with Arabic insertion \textarab[utf]{عربي}.
+
+%% This is some text in English with Arabic insertion \textarab[voc]{`arabI}.
+
+%% \SetTranslitConvention{dmg}
+
+%% bi-Asmi al-ll_ahi al-ra.hmAni al-ra.hImi
+
+\begin{arab}
+
+BASMALA
+
+al-.hamdu lill_ahi rabbi al-`_alamIni
+
+wa-al-.salATu wa-al-salAmu `alA^ mu.hammadiN sayyidi al-mursalIni
+
+al-l_ahumma lA taj`al lanA _danbaN illA .gafartahu
+
+wa lA hammaN illA farrajtahu
+
+wa lA daynaN illA qa.daytahu
+
+wa lA marI.daN illA ^safaytahu
+
+wa lA faqIraN illA 'a.gnaytahu
+
+wa lA `aduwwaN illA qahartahu wa-.tara.dtahu
+
+al-l_ahumma innI atawajjahu ilayka bi-_dAtika al-`aliyyaTiN
+
+yA al-ll_ahu
+
+yA .sA.hiba al-.ha.draTi al-mu.hammadiyyaTiN
+
+wa al-'ibr_ah_imiyyaTiN
+
+wa al-'anbiyA'i bi-al-kulliyyaTiN
+
+allA taj`al fInA ma.hrUmaN wa lA ^saqiyyaTiN
+
+AmIn
+
+(al-fAti.haT)
+
+sub.hAna rabbika rabbi al-`izzati `ammA ya.sifUna
+
+wa salAmuN `alA al-mursalIna
+
+wa al-.hamdu ll_ahi rabbi al`_alamIna
+
+\end{arab}
+
+
+\begin{arab}[trans]
+
+BASMALA
+
+al-.hamdu lill_ahi rabbi al-`_alamIni
+
+wa-al-.salATu wa-al-salAmu `alA^ mu.hammadiN sayyidi al-mursalIni
+
+al-l_ahumma lA taj`al lanA _danbaN illA .gafartahu
+
+wa lA hammaN illA farrajtahu
+
+wa lA daynaN illA qa.daytahu
+
+wa lA marI.daN illA ^safaytahu
+
+wa lA faqIraN illA 'a.gnaytahu
+
+wa lA `aduwwaN illA qahartahu wa-.tara.dtahu
+
+al-l_ahumma innI atawajjahu ilayka bi-_dAtika al-`aliyyaTiN
+
+yA al-ll_ahu
+
+yA .sA.hiba al-.ha.draTi al-mu.hammadiyyaTiN
+
+wa al-'ibr_ah_imiyyaTiN
+
+wa al-'anbiyA'i bi-al-kulliyyaTiN
+
+allA taj`al fInA ma.hrUmaN wa lA ^saqiyyaTiN
+
+AmIn
+
+(al-fAti.haT)
+
+sub.hAna rabbika rabbi al-`izzati `ammA ya.sifUna
+
+wa salAmuN `alA al-mursalIna
+
+wa al-.hamdu ll_ahi rabbi al`_alamIna
+\end{arab}
+
+
+\end{document}
+
