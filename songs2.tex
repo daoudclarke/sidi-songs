@@ -1,0 +1,133 @@
+% XeLaTeX
+\documentclass{minimal}
+\pdfpagewidth=\paperwidth
+\pdfpageheight=\paperheight
+
+\usepackage[a5paper,margin=0.5cm]{geometry}
+
+%% \documentclass{minimal}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage[voc]{arabxetex} % default option is "novoc"
+                       % other options are "voc", "fullvoc", "utf" and "trans"
+% arabxetex loads bidi.sty and fontspec.sty		       
+
+\usepackage{bidipoem}
+
+\setmainfont{Linux Libertine}
+
+%% \makeatletter
+%% \def\Allah{\begingroup\allahfont\char"FDF2\endgroup}
+%% \makeatother
+
+\linespread{5}
+
+\listfiles
+ 
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.7]{Amiri}
+
+%% \renewcommand\baytwidth{0.25\textwidth}
+
+\newcommand{\w}{\char"0627\char"0610}
+
+\def\baselineset{\lineskiplimit=-\maxdimen \baselineskip=15pt \relax}
+\newcommand{\bayt}[2]{#1&\quad#2\\\textLR{\textarab[trans]{#2}}&\quad\textLR{\textarab[trans]{#1}}\\}
+\newcommand{\trans}[2]{\textarab{#1}&\textarab[trans]{#1}&#2\\}
+\newcommand{\transw}[2]{\textarab{#1}&\baselineset\textarab[trans]{#1}&\baselineset{#2}\\}
+
+\setlength{\tabcolsep}{6pt}
+
+\def\arraystretch{0.7}%
+
+% you can also define \farsifont, \uighurfont, etc if you want
+\begin{document}
+
+%% This is some text in English with Arabic insertion \textarab{`arabI}.
+
+%% This is some text in English with Arabic insertion \textarab[utf]{عربي}.
+
+%% This is some text in English with Arabic insertion \textarab[voc]{`arabI}.
+
+%% \SetTranslitConvention{dmg}
+
+%% bi-Asmi al-ll_ahi al-ra.hmAni al-ra.hImi
+
+
+
+\center{\textarab{BASMALA}}
+
+\begin{longtable}{p{6cm}p{3cm}p{3cm}}
+\transw{al-ll_ahu al-ll_ahu al-ll_ahu al-ll_ah}{}
+\transw{al-ll_ahu al-ll_ah lA il_aha illA al-ll_ah}{}
+\transw{ata"InAka bi-al-faqri yA _dA al-.ginY}{}
+\transw{fa-anta alla_d"I lam tazal mu.hsinA}{}
+\transw{wa `awadtanA kulla fa.dliN `asY}{}
+\transw{yadUmu alla_d"I minka `awadtanA}{}
+\transw{masAkInuka al-^su`_du qad wulihU"A}{}
+\transw{bi-.hubbika i_d huwa aq.sY al-munY}{}
+\transw{i_dA kunta fI kulli .hAliN ma`I}{}
+\transw{fa-`an .hamli zAdI anA fI .ginY}{}
+\transw{ra'aynAka fI kulli amriN badA}{}
+\transw{wa laysa min al-amri ^say'uN lanA}{}
+\transw{satartu \w smakum .gIraTaN hA anA}{}
+\transw{umawwihu bi-al^sa`bi wa-almun.hanY}{}
+\transw{fa-mA a.haduN fI al-.ginY mi_tlukum}{}
+\transw{wa fI al-faqri lA a.haduN mi_tlunA}{}
+\transw{fa-'antum huwa al-.haqqu lA .gayrakum}{}
+\transw{fa-yA layta ^si`rI anA man anA}{}
+\transw{fa-yA rabbi .salli `alY al-mu.s.tafY}{}
+\transw{.salATaN takUnu ^sifA'aN lanA}{}
+\transw{wa-yA rabbi .salli `alY al-mu.s.tafY}{}
+\transw{.salATaN takUnu dawA'aN lanA}{}
+\transw{wa-yA rabbi .salli `alY al-mu.s.tafY}{}
+\transw{.salATaN takUnu amAnaN lanA}{}
+\end{longtable}
+
+\center{\textarab{BASMALA}}
+
+
+\begin{longtable}{p{6cm}p{3cm}p{3cm}}
+\transw{.tala`a al-badru `alaynA}{}
+\transw{min _taniyyAt alwadA`}{}
+\transw{wajaba al-^sukru `alaynA}{}
+\transw{mA da`A li-llahi dA`}{}
+\transw{ayyuha al-mab`U_tu fInA}{}
+\transw{ji'ta bi-al-'amri al-mu.tA`}{}
+\transw{ji'ta ^sarrafta al-madInaT}{}
+\transw{mar.habaN yA _hayra dA`}{}
+\end{longtable}
+
+\center{\textarab{BASMALA}}
+
+
+\begin{longtable}{p{6cm}p{3cm}p{3cm}}
+\transw{yA imAm al-rusli yA sanadI}{}
+\transw{anta bAbu al-ll_ahi wa mu`tamadI}{}
+\transw{fa-bi-dunyAya wa 'A_hiratI}{}
+\transw{yA rasUlu al-ll_ahi _hu_d bi-yadI}{}
+\transw{qasamaN bi-al-najmi .hIna hawY}{}
+\transw{mA al-mu`AfY wa al-saqImu sawA}{}
+\transw{fa-a_hla`i al-kawnayni `anka siwY}{}
+\transw{.hubbi mawlY al-`urbi wa al-`ajami}{}
+\end{longtable}
+
+\center{\textarab{BASMALA}}
+
+
+\begin{longtable}{p{6cm}p{3cm}p{3cm}}
+\transw{alA yA all_ah bi na.zraT}{}
+\transw{min al-`ayni al-ra.hImaT}{}
+\transw{tudAwI kulla mA bI}{}
+\transw{min amrA.diN saqImaT}{}
+\transw{}{}
+\transw{}{}
+\transw{}{}
+\transw{}{}
+\transw{}{}
+\end{longtable}
+
+
+
+\end{document}
+
