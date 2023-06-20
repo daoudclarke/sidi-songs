@@ -7,6 +7,7 @@
 
 %% \documentclass{minimal}
 \usepackage{longtable}
+\usepackage{array}
 \usepackage{makecell}
 \usepackage{array}
 \usepackage{arabluatex}
@@ -22,12 +23,12 @@
 %% \def\Allah{\begingroup\allahfont\char"FDF2\endgroup}
 %% \makeatother
 
-\linespread{5}
+%% \linespread{5}
 
 \listfiles
  
 %% \newfontfamily\arabicfont[Script=Arabic,Scale=1.7]{Amiri}
-\newfontfamily\arabicfont{Amiri}[Script=Arabic]
+\newfontfamily\arabicfont{Amiri}[Script=Arabic,Scale=1.7]
 
 %% \renewcommand\baytwidth{0.25\textwidth}
 
@@ -37,6 +38,11 @@
 %% \newcommand{\baytt}[2]{#1&\quad#2\\\textLR{\textarab[trans]{#2}}&\quad\textLR{\textarab[trans]{#1}}\\}
 \newcommand{\trans}[2]{\arb{#1}&\arb[trans]{#1}&#2\\}
 \newcommand{\transw}[2]{\arb{#1}&\baselineset\arb[trans]{#1}&\baselineset{#2}\\}
+%% \newcommand{\verse}[4]{\multirow{2}{*}{\arb{#2}}&\multirow{2}{*}{\arb{#1}}&\arb[trans]{#1}&\arb[trans]{#2}\\
+\newcommand{\verse}[4]{\baselineset\arb{#2}&\baselineset\arb{#1}&\arb[trans]{#1 #2}&{#3 / #4}\\
+}
+\newcommand{\bismillah}{\center{\arb{\arbmark{bismillah}}}}
+
 
 \setlength{\tabcolsep}{6pt}
 
@@ -56,37 +62,54 @@
 %% bi-Asmi al-ll_ahi al-ra.hmAni al-ra.hImi
 
 
+\bismillah
 
-\center{\arb{\arbmark{bismillah}}}
-
-\begin{longtable}{p{6cm}p{3cm}p{3cm}}
-\transw{al-l_ahu al-l_ahu al-l_ahu al-l_ah}{}
-\transw{al-l_ahu al-l_ah lA il_aha illA al-l_ah}{}
-\transw{ata"InAka bi-al-faqri yA _dA al-.ginY}{}
-\transw{fa-anta alla_d"I lam tazal mu.hsinA}{}
-\transw{wa `awadtanA kulla fa.dliN `asY}{}
-\transw{yadUmu alla_d"I minka `awadtanA}{}
-\transw{masAkInuka al-^su`_du qad wulihU"A}{}
-\transw{bi-.hubbika i_d huwa aq.sY al-munY}{}
-\transw{i_dA kunta fI kulli .hAliN ma`I}{}
-\transw{fa-`an .hamli zAdI anA fI .ginY}{}
-\transw{ra'aynAka fI kulli amriN badA}{}
-\transw{wa laysa min al-amri ^say'uN lanA}{}
-\transw{satartu ismakum .gIraTaN hA anA}{}
-\transw{umawwihu bi-al^sa`bi wa-almun.hanY}{}
-\transw{fa-mA a.haduN fI al-.ginY mi_tlukum}{}
-\transw{wa fI al-faqri lA a.haduN mi_tlunA}{}
-\transw{fa-'antum huwa al-.haqqu lA .gayrakum}{}
-\transw{fa-yA layta ^si`rI anA man anA}{}
-\transw{fa-yA rabbi .salli `alY al-mu.s.tafY}{}
-\transw{.salATaN takUnu ^sifA'aN lanA}{}
-\transw{wa-yA rabbi .salli `alY al-mu.s.tafY}{}
-\transw{.salATaN takUnu dawA'aN lanA}{}
-\transw{wa-yA rabbi .salli `alY al-mu.s.tafY}{}
-\transw{.salATaN takUnu amAnaN lanA}{}
+% translation source: https://damas-original.nur.nu/Texter/qasida_ataynaka.html
+\renewcommand{\arraystretch}{2}
+\begin{longtable}{lrm{4cm}m{4cm}}
+\verse{al-l_ahu al-l_ahu al-l_ahu al-l_ah}{al-l_ahu al-l_ah lA 'il_aha illA al-l_ah}{God}{there is no god but God}
+\verse{ata"InAka bi-al-faqri yA _dA al-.ginY}{fa-'anta alla_d"I lam tazal mu.hsinA}{We came to you poor O Rich}{and You never cease doing us good}
+\verse{wa `awadtanA kulla fa.dliN `asY}{yadUmu alla_d"I minka `awadtanA}{We became used to receive all favours from You}{hoping that what we receive from You will ever continue}
+\verse{masAkInuka al-^su`_du qad wulihU"A}{bi-.hubbika 'i_d huwa aq.sY al-munY}{Your dishevelled paupers are driven out of their wits}{by love for You, the ultimate end}
+\verse{i_dA kunta fI kulli .hAliN ma`I}{fa-`an .hamli zAdI anA fI .ginY}{If You were in all circumstances with me}{I would not need to take provisions with me}
+\verse{ra'aynAka fI kulli amriN badA}{wa laysa min al-amri ^say'uN lanA}{We see You revealed in every thing}{while we have no share in any thing}
+\verse{satartu ismakum .gIraTaN hA anA}{umawwihu bi-al^sa`bi wa-almun.hanY}{I concealed Your name out of jealousy}{camouflaged along curved and steep mountain tracks}
+\verse{fa-mA a.haduN fI al-.ginY mi_tlukum}{wa fI al-faqri lA a.haduN mi_tlunA}{For there is none like You in richness}{and in poverty there is none like us}
+\verse{fa-'antum huwa al-.haqqu lA .gayrakum}{fa-yA layta ^si`rI anA man anA}{For You are the al-Haqq, none but You}{If only I knew (the meaning of) "I"!}
+\verse{fa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu ^sifA'aN lanA}{O Lord send blessings upon the Chosen One}{blessings that will heal us}
+\verse{wa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu dawA'aN lanA}{O Lord send blessings upon the Chosen One}{blessings that will continue for us}
+\verse{wa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu amAnaN lanA}{O Lord send blessings upon the Chosen One}{blessings that will make us safe}
 \end{longtable}
 
-\center{\arbmark{bismillah}}
+
+%% \begin{longtable}{p{6cm}p{3cm}p{3cm}}
+%% \transw{al-l_ahu al-l_ahu al-l_ahu al-l_ah}{}
+%% \transw{al-l_ahu al-l_ah lA il_aha illA al-l_ah}{}
+%% \transw{ata"InAka bi-al-faqri yA _dA al-.ginY}{}
+%% \transw{fa-anta alla_d"I lam tazal mu.hsinA}{}
+%% \transw{wa `awadtanA kulla fa.dliN `asY}{}
+%% \transw{yadUmu alla_d"I minka `awadtanA}{}
+%% \transw{masAkInuka al-^su`_du qad wulihU"A}{}
+%% \transw{bi-.hubbika i_d huwa aq.sY al-munY}{}
+%% \transw{i_dA kunta fI kulli .hAliN ma`I}{}
+%% \transw{fa-`an .hamli zAdI anA fI .ginY}{}
+%% \transw{ra'aynAka fI kulli amriN badA}{}
+%% \transw{wa laysa min al-amri ^say'uN lanA}{}
+%% \transw{satartu ismakum .gIraTaN hA anA}{}
+%% \transw{umawwihu bi-al^sa`bi wa-almun.hanY}{}
+%% \transw{fa-mA a.haduN fI al-.ginY mi_tlukum}{}
+%% \transw{wa fI al-faqri lA a.haduN mi_tlunA}{}
+%% \transw{fa-'antum huwa al-.haqqu lA .gayrakum}{}
+%% \transw{fa-yA layta ^si`rI anA man anA}{}
+%% \transw{fa-yA rabbi .salli `alY al-mu.s.tafY}{}
+%% \transw{.salATaN takUnu ^sifA'aN lanA}{}
+%% \transw{wa-yA rabbi .salli `alY al-mu.s.tafY}{}
+%% \transw{.salATaN takUnu dawA'aN lanA}{}
+%% \transw{wa-yA rabbi .salli `alY al-mu.s.tafY}{}
+%% \transw{.salATaN takUnu amAnaN lanA}{}
+%% \end{longtable}
+
+\bismillah
 
 
 \begin{longtable}{p{6cm}p{3cm}p{3cm}}
@@ -100,7 +123,7 @@
 \transw{mar.habaN yA _hayra dA`}{}
 \end{longtable}
 
-\center{\arbmark{bismillah}}
+\bismillah
 
 
 \begin{longtable}{p{6cm}p{3cm}p{3cm}}
@@ -114,7 +137,7 @@
 \transw{.hubbi mawlY al-`urbi wa al-`ajami}{}
 \end{longtable}
 
-\center{\arbmark{bismillah}}
+\bismillah
 
 
 \begin{longtable}{p{6cm}p{3cm}p{3cm}}
