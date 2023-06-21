@@ -1,5 +1,5 @@
 % XeLaTeX
-\documentclass{minimal}
+\documentclass[12pt]{article}
 %% \pdfpagewidth=\paperwidth
 %% \pdfpageheight=\paperheight
 
@@ -28,11 +28,12 @@
 \listfiles
  
 %% \newfontfamily\arabicfont[Script=Arabic,Scale=1.7]{Amiri}
-\newfontfamily\arabicfont{Amiri}[Script=Arabic,Scale=1.7]
+\newfontfamily\arabicfont{Amiri}[Script=Arabic,Scale=1.3]
 
 %% \renewcommand\baytwidth{0.25\textwidth}
 
 \SetTranslitConvention{loc}
+\SetTranslitStyle{\bfseries}
 
 \newcommand{\w}{\char"0627\char"0610}
 
@@ -40,8 +41,8 @@
 %% \newcommand{\baytt}[2]{#1&\quad#2\\\textLR{\textarab[trans]{#2}}&\quad\textLR{\textarab[trans]{#1}}\\}
 \newcommand{\trans}[2]{\arb{#1}&\arb[trans]{#1}&#2\\}
 \newcommand{\transw}[2]{\arb{#1}&\baselineset\arb[trans]{#1}&\baselineset{#2}\\}
-%% \newcommand{\verse}[4]{\multirow{2}{*}{\arb{#2}}&\multirow{2}{*}{\arb{#1}}&\arb[trans]{#1}&\arb[trans]{#2}\\
-\newcommand{\verse}[4]{\baselineset\arb{#2}&\baselineset\arb{#1}&\arb[trans]{#1 #2}&{#3 / #4}\\
+%% \newcommand{\averse}[4]{\multirow{2}{*}{\arb{#2}}&\multirow{2}{*}{\arb{#1}}&\arb[trans]{#1}&\arb[trans]{#2}\\
+\newcommand{\averse}[4]{\baselineset\arb{#2}&\baselineset\arb{#1}&\arb[trans]{#1 #2}&{#3 / #4}\\
 }
 \newcommand{\bismillah}{\center{\arb{\arbmark{bismillah}}}}
 
@@ -69,33 +70,29 @@
 % translation source: https://damas-original.nur.nu/Texter/qasida_ataynaka.html
 \renewcommand{\arraystretch}{2}
 \begin{longtable}{lrm{4cm}m{4cm}}
-\verse{al-l_ahu al-l_ahu al-l_ahu al-l_ah}{al-l_ahu al-l_ah lA 'il_aha illA al-l_ah}{God}{there is no god but God}
-\verse{ata"InAka bi-al-faqri yA _dA al-.ginY}{fa-'anta alla_d"I lam tazal mu.hsinA}{We came to you poor O Rich}{and You never cease doing us good}
-\verse{wa `awadtanA kulla fa.dliN `asY}{yadUmu alla_d"I minka `awadtanA}{We became used to receive all favours from You}{hoping that what we receive from You will ever continue}
-\verse{masAkInuka al-^su`_du qad wulihU"A}{bi-.hubbika 'i_d huwa aq.sY al-munY}{Your dishevelled paupers are driven out of their wits}{by love for You, the ultimate end}
-\verse{i_dA kunta fI kulli .hAliN ma`I}{fa-`an .hamli zAdI anA fI .ginY}{If You were with me in all states}{I would not need to carry provisions}
-\verse{ra'aynAka fI kulli 'amriN badA}{wa laysa min al-'amri ^say'uN lanA}{We see You revealed in every thing}{while we have no share in any thing}
-\verse{satartu ismakum .gIraTaN hA anA}{umawwihu bi-al^sa`bi wa-almun.hanY}{I concealed Your name out of jealousy}{camouflaged along curved and steep mountain tracks}
-\verse{fa-mA a.haduN fI al-.ginY mi_tlukum}{wa fI al-faqri lA a.haduN mi_tlunA}{For there is none like You in richness}{and in poverty there is none like us}
-\verse{fa-'antum huwa al-.haqqu lA .gayrakum}{fa-yA layta ^si`rI anA man anA}{For You are the al-Haqq, none but You}{If only I knew (the meaning of) "I"!}
-\verse{fa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu ^sifA'aN lanA}{O Lord send blessings upon the Chosen One}{blessings that will heal us}
-\verse{wa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu dawA'aN lanA}{O Lord send blessings upon the Chosen One}{blessings that will continue for us}
-\verse{wa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu amAnaN lanA}{O Lord send blessings upon the Chosen One}{blessings that will make us safe}
+\averse{al-l_ahu al-l_ahu al-l_ahu al-l_ah}{al-l_ahu al-l_ah lA 'il_aha illA al-l_ah}{God}{there is no god but God}
+\averse{ata"InAka bi-al-faqri yA _dA al-.ginY}{fa-'anta alla_d"I lam tazal mu.hsinA}{We came to you poor O Rich}{and You never cease doing us good}
+\averse{wa `awadtanA kulla fa.dliN `asY}{yadUmu alla_d"I minka `awadtanA}{We became used to receive all favours from You}{hoping that what we receive from You will ever continue}
+\averse{masAkInuka al-^su`_du qad wulihU"A}{bi-.hubbika 'i_d huwa aq.sY al-munY}{Your dishevelled paupers are driven out of their wits}{by love for You, the ultimate end}
+\averse{i_dA kunta fI kulli .hAliN ma`I}{fa-`an .hamli zAdI anA fI .ginY}{If You were with me in all states}{I would not need to carry provisions}
+\averse{ra'aynAka fI kulli 'amriN badA}{wa laysa min al-'amri ^say'uN lanA}{We see You revealed in every thing}{while we have no share in any thing}
+\averse{satartu ismakum .gIraTaN hA anA}{umawwihu bi-al^sa`bi wa-almun.hanY}{I concealed Your name out of jealousy}{camouflaged along curved and steep mountain tracks}
+\averse{fa-mA a.haduN fI al-.ginY mi_tlukum}{wa fI al-faqri lA a.haduN mi_tlunA}{For there is none like You in richness}{and in poverty there is none like us}
+\averse{fa-'antum huwa al-.haqqu lA .gayrakum}{fa-yA layta ^si`rI anA man anA}{For You are the al-Haqq, none but You}{If only I knew (the meaning of) ``I''!}
+\averse{fa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu ^sifA'aN lanA}{O Lord send blessings upon the Chosen One}{blessings that will heal us}
+\averse{wa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu dawA'aN lanA}{O Lord send blessings upon the Chosen One}{blessings that will continue for us}
+\averse{wa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu amAnaN lanA}{O Lord send blessings upon the Chosen One}{blessings that will make us safe}
 \end{longtable}
 
 \bismillah
 
 
 
-\begin{longtable}{p{6cm}p{3cm}p{3cm}}
-\transw{.tala`a al-badru `alaynA}{}
-\transw{min _taniyyAt alwadA`}{}
-\transw{wajaba al-^sukru `alaynA}{}
-\transw{mA da`A li-ll_ahi dA`}{}
-\transw{ayyuha al-mab`U_tu fInA}{}
-\transw{ji'ta bi-al-'amri al-mu.tA`}{}
-\transw{ji'ta ^sarrafta al-madInaT}{}
-\transw{mar.habaN yA _hayra dA`}{}
+\begin{longtable}{lrm{4cm}m{4cm}}
+\averse{.tala`a al-badru `alaynA}{min _taniyyAt alwadA`}{O the white moon rose over us}{from the valley of Wada}
+\averse{wajaba al-^sukru `alaynA}{mA da`A li-ll_ahi dA`}{And we owe it to show gratefulness}{Where the call is to Allah}
+\averse{ayyuha al-mab`U_tu fInA}{ji'ta bi-al-'amri al-mu.tA`}{O you who were raised amongst us}{Coming with a word to be obeyed}
+\averse{ji'ta ^sarrafta al-madInaT}{mar.habaN yA _hayra dA`}{You have brought to this city nobleness}{Welcome! Best caller to God’s way}
 \end{longtable}
 
 \bismillah
