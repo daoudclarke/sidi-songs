@@ -32,8 +32,9 @@
 
 %% \renewcommand\baytwidth{0.25\textwidth}
 
-\SetTranslitConvention{loc}
+\SetTranslitConvention{dmg}
 \SetTranslitStyle{\bfseries}
+\SetArbDflt*
 
 \newcommand{\w}{\char"0627\char"0610}
 
@@ -42,11 +43,20 @@
 \newcommand{\trans}[2]{\arb{#1}&\arb[trans]{#1}&#2\\}
 \newcommand{\transw}[2]{\arb{#1}&\baselineset\arb[trans]{#1}&\baselineset{#2}\\}
 %% \newcommand{\averse}[4]{\multirow{2}{*}{\arb{#2}}&\multirow{2}{*}{\arb{#1}}&\arb[trans]{#1}&\arb[trans]{#2}\\
-\newcommand{\averse}[4]{\baselineset\arb{#2}&\baselineset\arb{#1}&\arb[trans]{#1 #2}&{#3 / #4}\\
+\newcommand{\averse}[4]{\baselineset\arb{#2}&\baselineset\arb{#1}&\arb[trans]{#1 / #2}&{#3 / #4}\\
 }
-\newcommand{\bverse}[4]{\rightline{\arb{#1}} \newline \arb{#2}&\arb[trans]{#1 #2}&{#3 / #4}\\
+\newcommand{\bverse}[4]{\rightline{\arb{#1}} \newline \arb{#2}&\arb[trans]{#1 / #2}&{#3 / #4}\\
+}
+\newcommand{\cverse}[2]{\rightline{\arb{#1}}&\arb[trans]{#1}&{#2}\\
 }
 \newcommand{\bismillah}{\center{\arb{\arbmark{bismillah}}}}
+
+\newcommand{\songtitle}[1]{\newpage
+  \bismillah
+  \vspace{1cm}
+  \center{#1}
+  \vspace{1cm}
+}
 
 
 \setlength{\tabcolsep}{6pt}
@@ -75,15 +85,15 @@
 \averse{al-l_ahu al-l_ahu al-l_ahu al-l_ah}{al-l_ahu al-l_ah lA 'il_aha illA al-l_ah}{God}{there is no god but God}
 \averse{ata"InAka bi-al-faqri yA _dA al-.ginY}{fa-'anta alla_d"I lam tazal mu.hsinA}{We came to you poor O Rich}{and You never cease doing us good}
 \averse{wa `awadtanA kulla fa.dliN `asY}{yadUmu alla_d"I minka `awadtanA}{We became used to receive all favours from You}{hoping that what we receive from You will ever continue}
-\averse{masAkInuka al-^su`_du qad wulihU"A}{bi-.hubbika 'i_d huwa aq.sY al-munY}{Your dishevelled paupers are driven out of their wits}{by love for You, the ultimate end}
-\averse{i_dA kunta fI kulli .hAliN ma`I}{fa-`an .hamli zAdI anA fI .ginY}{If You were with me in all states}{I would not need to carry provisions}
+\averse{masAkInuka al-^su`_du qad wulihUA}{bi-.hubbika 'i_d huwa aq.sY al-munY}{Your dishevelled paupers are driven out of their wits}{by love for You, the ultimate end}
+\averse{i_dA kunta fI kulli .hAliN ma`I}{fa-`an .hamli zAdI 'anA fI .ginY}{If You were with me in all states}{I would not need to carry provisions}
 \averse{ra'aynAka fI kulli 'amriN badA}{wa laysa min al-'amri ^say'uN lanA}{We see You revealed in every thing}{while we have no share in any thing}
-\averse{satartu ismakum .gIraTaN hA anA}{umawwihu bi-al^sa`bi wa-almun.hanY}{I concealed Your name out of jealousy}{camouflaged along curved and steep mountain tracks}
-\averse{fa-mA a.haduN fI al-.ginY mi_tlukum}{wa fI al-faqri lA a.haduN mi_tlunA}{For there is none like You in richness}{and in poverty there is none like us}
-\averse{fa-'antum huwa al-.haqqu lA .gayrakum}{fa-yA layta ^si`rI anA man anA}{For You are the al-Haqq, none but You}{If only I knew (the meaning of) ``I''!}
+\averse{satartu ismakum .gIraTaN hA anA}{umawwihu bi-al-^sa`bi wa-almun.hanY}{I concealed Your name out of jealousy}{camouflaged along curved and steep mountain tracks}
+\averse{fa-mA 'a.haduN fI al-.ginY mi_tlukum}{wa fI al-faqri lA 'a.haduN mi_tlunA}{For there is none like You in richness}{and in poverty there is none like us}
+\averse{fa-'antum huwa al-.haqqu lA .gayrakum}{fa-yA layta ^si`rI 'anA man 'anA}{For You are the al-Haqq, none but You}{If only I knew (the meaning of) ``I''!}
 \averse{fa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu ^sifA'aN lanA}{O Lord send blessings upon the Chosen One}{blessings that will heal us}
 \averse{wa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu dawA'aN lanA}{O Lord send blessings upon the Chosen One}{blessings that will continue for us}
-\averse{wa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu amAnaN lanA}{O Lord send blessings upon the Chosen One}{blessings that will make us safe}
+\averse{wa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu 'amAnaN lanA}{O Lord send blessings upon the Chosen One}{blessings that will make us safe}
 \end{longtable}
 
 \bismillah
@@ -126,45 +136,46 @@
 
 \bismillah
 
+% Arabic source: https://www.dutaislam.com/2020/01/teks-lirik-ala-ya-allah-binadzroh-arab-latin-indonesia-dan-inggris.html
 % Translation source: https://seekersguidance.org/articles/video/ala-ya-allah-bi-nadhra-imam-haddads-poem-at-his-wifes-death/
 
 \begin{longtable}{lrm{4cm}m{4cm}}
-\averse{alA yA al-l_ah bi na.zraT}{min al-`ayni al-ra.hImaT}{O God by your glance}{from the eye of mercy}
+\averse{'alA yA al-l_ah bi na.zraT}{min al-`ayn-i al-ra.hImaT}{O God by your glance}{from the eye of mercy}
 \averse{tudAwI kulla mA bI}{min 'amrA.diN saqImaT}{Erase all that it is in me}{of every type of sickness}
-\averse{alA yA .sA.h yA .sA.h}{lA tajza` wa ta.djar}{O my friend}{do not be overburdened with worries}
+\averse{'alA yA .sA.h yA .sA.h}{lA tajza` wa ta.djar}{O my friend}{do not be overburdened with worries}
 \averse{wa sallim lilmaqAdIr}{kay tu.hmad wa tu'jar}{And submit to God’s decrees}{so that you can become praiseworthy and rewarded}
 \averse{wa kun ra.diN bimA qaddar}{al-mawlY wa dabbar}{And be content with what}{the Master has decreed}
 \averse{wa lA tas_ha.t qa.dA al-l_ah}{rabbi al-`ar^si al-'akbar}{and don’t have any displeasure with the decree of Allah}{Lord of the Lofty Throne}
-\averse{wa kun .sAbir wa ^sAkir}{(alA yA al-l_ah bi na.zraT)}{And be patient and grateful}{(O God by your glance)}
-\averse{takun fA'iz wa .zAfir}{(alA yA al-l_ah bi na.zraT)}{You will become victorious and rewarded}{(O God by your glance)}
-\averse{wa min ahli al-sarA'ir}{(alA yA al-l_ah bi na.zraT)}{And be from the people of Inward Secrets}{(O God by your glance)}
+\averse{wa kun .sAbir wa ^sAkir}{('alA yA al-l_ah bi na.zraT)}{And be patient and grateful}{(O God by your glance)}
+\averse{takun fA'iz wa .zAfir}{('alA yA al-l_ah bi na.zraT)}{You will become victorious and rewarded}{(O God by your glance)}
+\averse{wa min ahli al-sarA'ir}{('alA yA al-l_ah bi na.zraT)}{And be from the people of Inward Secrets}{(O God by your glance)}
 \averse{rijal al-l_ahi min kulli}{_dI qalbiN munawwar}{The people of Allah have}{an illuminated heart} 
-\averse{mu.saffaN min jamI`i}{al-dansi .tayyibiN mu.tahhar}{that is purified from all dirt}{pure, and a purification for others}
+\averse{mu.saffaN min jamI`i}{al-danas .tayyibiN mu.tahhar}{that is purified from all dirt}{pure, and a purification for others}
 \averse{fa-_dih dunyA daniyyaT}{.hawAdi_tuhA ka_tIraT}{And this lowly world}{it’s problems are many}
 \averse{wa `I^satuhA .haqIraT}{wa muddatuhA qa.sIraT}{in every moment}{and life within it does not have a value}
 \averse{wa lA ya.hri.s `alayhA}{siwY 'a`mY al-ba.sIraT}{And one does not seek this dunya}{unless their sight is completely blinded}
-\averse{`adImu al-`aqli law kAna}{ya`qil kAna afkar}{If they had an intellect}{they would have been more reflective}
-\averse{tafakkir fI fanAhA}{(alA yA al-l_ah bi na.zraT)}{Reflect over the fading of this world}{(O God by your glance)}
-\averse{wa fI ka_trati `anAhA}{(alA yA al-l_ah bi na.zraT)}{And on the great difficulties that occur}{(O God by your glance)}
-\averse{wa fI qillaTi .ginAhA}{(alA yA al-l_ah bi na.zraT)}{And on the low worth of its value}{(O God by your glance)}
-\averse{fa-.tUbY _tumma .tUbY}{li-man minhA t.ha_d_dar}{So blessed, truly blessed}{is the who is careful of it}
+\averse{`adImu al-`aqli law kAna}{ya`qil kAna 'afkar}{If they had an intellect}{they would have been more reflective}
+\averse{tafakkir fI fanAhA}{('alA yA al-l_ah bi na.zraT)}{Reflect over the fading of this world}{(O God by your glance)}
+\averse{wa fI ka_trati `anAhA}{('alA yA al-l_ah bi na.zraT)}{And on the great difficulties that occur}{(O God by your glance)}
+\averse{wa fI qillaTi .ginAhA}{('alA yA al-l_ah bi na.zraT)}{And on the low worth of its value}{(O God by your glance)}
+\averse{fa-.tUbY _tumma .tUbY}{li-man minhA ta.ha_d_dar}{So blessed, truly blessed}{is the who is careful of it}
 \averse{wa .tallaqahA wa fI .tA`aTi}{al-ra.hmAni ^samar}{and who divorced the world and focus themselves}{towards obedience of the Merciful}
-\averse{alA yA `ayn jUdI}{bi-dam`iN minka sA'il}{Oh my eye!}{Let the tears flow}
+\averse{'alA yA `ayn jUdI}{bi-dam`iN minka sA'il}{Oh my eye!}{Let the tears flow}
 \averse{`alY _dAka al-.habIbi}{alla_dI qad kAna nAzil}{regarding that beloved}{that used to be with us}
 \averse{ma`anA fI al-marAbi`}{wa-'a.sba.ha safara rA.hil}{Who was once with us}{then went on their journey}
 \averse{wa 'amsa al-qalbu wa al-bAlu}{min ba`dihi mukaddar}{and my heart and mind}{after them have become overtaken}
-\averse{wa lAkin .hasbiya al-l_ah}{(alA yA al-l_ah bi na.zraT)}{But Allah is my Sufficiency}{(O God by your glance)}
-\averse{wa kullu al-'amri li-l-l_ah}{(alA yA al-l_ah bi na.zraT)}{And the entire affair belongs to Allah}{(O God by your glance)}
-\averse{wa lA yabqY siwY al-l_ah}{(alA yA al-l_ah bi na.zraT)}{And no one remains except Allah}{(O God by your glance)}
-\averse{`alY ba^s^sAri jAdat}{sa.hA'ib ra.hmaTi al-barr}{Upon Bashar have come}{the clouds of Allah’s mercy}
-\averse{wa .hayyAhum birU.hi}{al-ri.dA rabbI wa ba^s^sar}{and Allah has given them glad tidings}{and has blessed them}
+\averse{wa lAkin .hasbiya al-l_ah}{('alA yA al-l_ah bi na.zraT)}{But Allah is my Sufficiency}{(O God by your glance)}
+\averse{wa kullu al-'amri li-l-l_ah}{('alA yA al-l_ah bi na.zraT)}{And the entire affair belongs to Allah}{(O God by your glance)}
+\averse{wa lA yabqY siwY al-l_ah}{('alA yA al-l_ah bi na.zraT)}{And no one remains except Allah}{(O God by your glance)}
+\averse{`alY ba^s^sAr jAdat}{sa.hA'ib ra.hmaTi al-barr}{Upon Bashar have come}{the clouds of Allah’s mercy}
+\averse{wa .hayyAhum biraw.hi}{al-ri.dA rabbI wa ba^s^sar}{and Allah has given them glad tidings}{and has blessed them}
 \averse{bihA sAdAtunA}{wa-al-^suyU_hu al-`ArifUnA}{Within it are our masters}{and gnostic teachers}
 \averse{wa 'ahlUnA wa 'a.hbAbi}{qalbI nAzilUnA}{and our family}{those beloved to my heart}
 \averse{wa man hum fI sarA'ir}{fu'AdI qA.tinUnA}{And those who have taken residence}{in the deepest depths of my heart}
 \averse{bi-sA.haTi turbihA min}{_dakiyyi al-miski 'a`.tar}{And in this plain of the graveyard}{its dust is more beautiful than musk}
-\averse{manAzilu _hayri sAdaT}{(alA yA al-l_ah bi na.zraT)}{Because it is the resting place of the best of the Sayyids}{(O God by your glance)}
-\averse{li-kulli al-nAsi qAdaT}{(alA yA al-l_ah bi na.zraT)}{Exemplars for all people}{(O God by your glance)}
-\averse{ma.habbatahum sa`AdaT}{(alA yA al-l_ah bi na.zraT)}{Loving them is felicity}{(O God by your glance)}
+\averse{manAzilu _hayri sAdaT}{('alA yA al-l_ah bi na.zraT)}{Because it is the resting place of the best of the Sayyids}{(O God by your glance)}
+\averse{li-kulli al-nAsi qAdaT}{('alA yA al-l_ah bi na.zraT)}{Exemplars for all people}{(O God by your glance)}
+\averse{ma.habbatahum sa`AdaT}{('alA yA al-l_ah bi na.zraT)}{Loving them is felicity}{(O God by your glance)}
 \averse{'alA yA ba_hta man zArahum}{bi-al-.sidqi wa-andar}{Fortunate is the one who visits them}{with sincerity}
 \averse{ilayhim mu`tanI kullu}{ma.tlUbihi tayassar}{By the blessing of visiting them}{what they seek from Allah will come}
 \end{longtable}
@@ -211,6 +222,19 @@
 \bverse{wa qawwinA bi-al-'anwAri fI kulli la.h.zaTiN}{wa _tabbitnA `inda al-_hatmi wa al-naz`i wa al-qabri}{Strengthen us with lights at every instant}{and make us firm at the sealing, the agony of death, and the grave}
 \end{longtable}
 
+
+\songtitle{The Shadhuli Wird}
+
+
+\begin{longtable}{m{8cm}m{4cm}m{4cm}}
+  \cverse{asta.gfiru al-l_ahu al-`a.zIm (100)}{I seek forgiveness from God the Almighty}
+  \cverse{alla_dI lA 'il_aha illAhu, al-.hayyu al-qayyUm wa 'atUbu 'ilayh}{The Living the Self-Subsistent, and I repent to Him}
+  \bverse{al-l_ahumma .salli `alY sayyidinA mu.hammadiN}{wa 'Alihi wa .sa.hbihi wa sallim (100)}{O God send prayers upon our Master Muhammad}{and his family and companions, and send peace}
+  \cverse{mu.hammaduN rasUlu al-l_ah}{Muhammad is the Messenger of God}
+  \cverse{lA 'il_aha 'illA al-l_ah (100)}{There is no god but God}
+  \cverse{mu.hammaduN rasUlu al-l_ah}{Muhammad is the Messenger of God}
+  \cverse{al-l_ah}{God}
+\end{longtable}
 
 
 \end{document}
