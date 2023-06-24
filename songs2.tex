@@ -3,7 +3,7 @@
 %% \pdfpagewidth=\paperwidth
 %% \pdfpageheight=\paperheight
 
-\usepackage[a4paper,margin=0.5cm]{geometry}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=0.5cm,right=0.5cm]{geometry}
 
 %% \documentclass{minimal}
 \usepackage{longtable}
@@ -51,17 +51,19 @@
 }
 \newcommand{\bismillah}{\center{\arb{\arbmark{bismillah}}}}
 
-\newcommand{\songtitle}[1]{\newpage
+\newcommand{\songtitle}[2]{\newpage
   \bismillah
   \vspace{1cm}
-  \center{#1}
+  \center{\large \arb{#1} \hspace{1cm} \arb[trans]{\uc{#1}} \hspace{1cm} #2}
   \vspace{1cm}
 }
 
 
+
 \setlength{\tabcolsep}{6pt}
 
-\def\arraystretch{0.7}%
+% \def\arraystretch{0.7}%
+\renewcommand{\arraystretch}{2}
 
 % you can also define \farsifont, \uighurfont, etc if you want
 \begin{document}
@@ -77,13 +79,14 @@
 %% bi-Asmi al-ll_ahi al-ra.hmAni al-ra.hImi
 
 
-\bismillah
+
+\songtitle{ataynAka bi-al-faqri}{We came to You poor}
 
 % translation source: https://damas-original.nur.nu/Texter/qasida_ataynaka.html
-\renewcommand{\arraystretch}{2}
 \begin{longtable}{lrm{4cm}m{4cm}}
 \averse{al-l_ahu al-l_ahu al-l_ahu al-l_ah}{al-l_ahu al-l_ah lA 'il_aha illA al-l_ah}{God}{there is no god but God}
-\averse{ata"InAka bi-al-faqri yA _dA al-.ginY}{fa-'anta alla_d"I lam tazal mu.hsinA}{We came to you poor O Rich}{and You never cease doing us good}
+\hline
+\averse{ataynAka bi-al-faqri yA _dA al-.ginY}{fa-'anta alla_d"I lam tazal mu.hsinA}{We came to you poor O Rich}{and You never cease doing us good}
 \averse{wa `awadtanA kulla fa.dliN `asY}{yadUmu alla_d"I minka `awadtanA}{We became used to receive all favours from You}{hoping that what we receive from You will ever continue}
 \averse{masAkInuka al-^su`_du qad wulihUA}{bi-.hubbika 'i_d huwa aq.sY al-munY}{Your dishevelled paupers are driven out of their wits}{by love for You, the ultimate end}
 \averse{i_dA kunta fI kulli .hAliN ma`I}{fa-`an .hamli zAdI 'anA fI .ginY}{If You were with me in all states}{I would not need to carry provisions}
@@ -96,13 +99,14 @@
 \averse{wa-yA rabbi .salli `alY al-mu.s.tafY}{.salATaN takUnu 'amAnaN lanA}{O Lord send blessings upon the Chosen One}{blessings that will make us safe}
 \end{longtable}
 
-\bismillah
 
+\songtitle{.tala`a al-badru}{The white moon rose over us}
 
 
 \begin{longtable}{lrm{4cm}m{4cm}}
 \averse{.tala`a al-badru `alaynA}{min _taniyyAt alwadA`}{O the white moon rose over us}{from the valley of Wada}
 \averse{wajaba al-^sukru `alaynA}{mA da`A li-ll_ahi dA`}{And we owe it to show gratefulness}{Where the call is to Allah}
+\hline
 \averse{ayyuha al-mab`U_tu fInA}{ji'ta bi-al-'amri al-mu.tA`}{O you who were raised amongst us}{Coming with a word to be obeyed}
 \averse{ji'ta ^sarrafta al-madInaT}{mar.habaN yA _hayra dA`}{You have brought to this city nobleness}{Welcome! Best caller to God’s way}
 %% \averse{mar.habaN fIman 'atAnA}{wa bihi sAda .himAnA}{}{}
@@ -113,13 +117,47 @@
 %% \averse{wa asbili al-sitra `alaynA}{yA mujIbaN kulla dA`}{}{}
 \end{longtable}
 
-\bismillah
+
+\songtitle{laka al-.hamd}{To You is the Praise}
+
+\begin{longtable}{m{8cm}m{4cm}m{4cm}}
+\bverse{lA 'il_aha 'illA al-l_ah lA 'il_aha 'illA al-l_ah}{lA 'il_aha 'illA al-l_ah mu.hammad rasUlu al-l_ah}{There is no god but God}{Muhammad is the messenger of God}
+\hline
+\bverse{laka al-.hamdu yA _dA al-.hilmi wa al-`afwi wa al-sitri}{wa .hamdiya min nu`mAka yA wAsi`a al-birri}{Praise is due to You, the possessor of serenity, forgiveness and veiling}{My praise is part of Your blessing, oh abundant Giver}
+\bverse{laka al-.hamdu `adda al-qa.tri wa al-ramli wa al.ha.sY}{wa `adda nabAti al-ar.di wa al-.hUti fI al-ba.hri}{Praise is due to You, in number as great as the drops of rain, the grains of sand, the pebbles}{the plants of the earth and the fish of the sea}
+\bverse{laka al-.hamdu `adda al-namli wa al-jinni wa al-'insi}{wa mil'a al-samA wa al-`ar^si wa al-kawkabi al-durri}{Praise is due to You in number as great as the ants, jinn and men}{in quantity as great as the sky, the throne, and the stars like scattered pearls}
+\bverse{wa mil'a al-fa.dA wa al-law.hi wa al-kursI waw al-_tarY}{wa `adda jamI`i alkA'inAti 'ilY al-.ha^sri}{In quantity as great as space itself, and the tablet of forms, the footstool, the most earth}{and the number of all created beings on the day of gathering}
+\bverse{laka al-.hamdu yA rabbI kamA anta 'ahluhu}{fa-'innI lA 'u.h.sI al-_tanA'a madY al-dahri}{Praise is due to You O my Loard as you desrve it}{for I cannot praise You fittingly to the full extent of time}
+\bverse{laka al-.hamdu yA mu`.tI al-mawAhiba bi-al-fa.dli}{wa mAni.ha 'ahli al-l_ahi bi-al-fat.hi wa al-na.sri}{Praise is due to You oh endless Giver of gifts}{the One who grants opening and triumph to the people of Allah}
+\bverse{laka al-.hamdu bi-al'anfAsi wa al-jismi wa al-qalbi}{tafa.d.dal `alY `abdiN ta.hayyara fI al-'amri}{Praise is due to You with every breath with the body and the heart}{Look kindly on a slave who is perplexed by the command}
+\bverse{fa-'innI wa 'in kAnat _dunUbI ta`UqunI}{fa-lI fIka .husnu al-.zanni yajburu lI kasrI}{If my wrong actions weigh me down}{I still have a good opinion of You that You will mend my broken spirit}
+\bverse{fa-munna `alaynA yA .gafUru bi-tawbaTiN}{tajubbu alla_dI qad kAna fI sAlifi al-`umri}{O Forgiving! Grant a turning away [from wrong action] to us}{which will undo what happened in our early years}
+\bverse{wa zidnA mina al-na`mA'i wa al-nUri wa al-ka^sfi}{wa makkinnA fI al-'ir^sAdi bi-al-'i_dni wa al-sirri}{Increase us in blessing, light and unveiling}{and strengthen us in guidance, with permission and with the secret}
+\bverse{wa 'ayyidnA fI 'aqwAlinA wa fi`AlinA}{wa yassirlanA al-'arzAqa min .hai_tu lA nadrI}{Support us in our words and deeds}{and make our provision easy for us --- from where we know not!}
+\bverse{fa-hA na.hnu fI bAbi al-tafa.d.duli wAqifuN}{wa munta.ziruN `a.tfa al-.habIbi bi-lA `usri}{Here we are standing at the door of favour}{waiting without hardship for the Beloved to turn to us}
+\bverse{fa'an`im `alaynA yA mujIbu bi sur`aTiN}{fa-'innaka 'ahlu al-jUdi wa al-manni wa al-_hayri}{Swiftly send us Your ease, O Answerer}{for You are the possessor of generosity, liberality and goodness}
+\bverse{fa-fa.dluka mawjUduN bi-.gayri wujUdinA}{wa jUduka masdUluN `alaynA bi-lA nukri}{Your Bounty exists without our existence}{and Your Generosity pours down on us, undenied}
+\bverse{wa wafiqnA li-l-^sukri alla_dI huwa lAzimuN}{`alaynA wa yastad`I al-mazIda bi-lA _husri}{Give us success in the thankfulness which is our duty}{and which itself calls for increase from You without loss to us}
+\bverse{wa 'a_hirnA min sijni al-jusUmi wa raqqinA}{li-.ha.drati 'arwA.hiN _tawAbaN `alY al-^sukri}{Free us from the prison of our bodies and raise us up}{to the presence of the spirits as a reward for our gratitude}
+\bverse{wa 'a^shidnA ma`nY al-_dAti fI kulli ma.zhariN}{li-yaqwY ^suhUdI fI al-^sadA'idi wa al-yusri}{Let us see the meaning of the essence in every manifestation}{in order to strengthen our witnessing both in times of ease and trouble}
+\bverse{wa 'afninA `annA wa abqinA bi-ka dA'imaN}{li-nal.haqa 'ahla al-'ir_ti min .ha.draTi al-sirri}{Annihilate us to ourselves and give us going-on in You always}{so that we may join the people who have inherited the presence of the secret}
+\bverse{fa-'amruka li-l-'a^syA'i fI qawli kun takun}{fa-kawwin la-nA al-'a^syA'a `azmaN bilA makri}{Your command to things is in the word ``Be --- it is!''}{so shape things for us with firm intention and without deception}
+\bverse{wa .salli bi-'anwA`i al-kamAlAti kullihA}{`alY 'a.hmada alhAdI 'ilY .ha.draTi al-.tuhri}{Bless Ahmad, the guide to the presence of purity}{with all the forms of perfection}
+\bverse{wa 'Alihi wa al-.sa.hbi al-kirAmi wa man da`A}{li-nA.zimi h_a_dA al-na.zmi bi-al-^sar.hi li-l-.sadri}{And his Family and noble Companions and whoever prays}{for expansion of the breast for the composer of these verses}
+\bverse{wa yA rabbi bi-al-hAdI al-ra'Ufi muhammadiN}{'anilnA `ulUmaN tanfa`unA yawma al-na^sri}{Amd O Lord! Through the compassionate guide Muhammad}{grant us sciences that will benefit us on the Day of Rising}
+\bverse{wa qawwinA bi-al-'anwAri fI kulli la.h.zaTiN}{wa _tabbitnA `inda al-_hatmi wa al-naz`i wa al-qabri}{Strengthen us with lights at every instant}{and make us firm at the sealing, the agony of death, and the grave}
+\end{longtable}
+
+
+
+\songtitle{yA 'imAm al-rusli}{O Leader of the Messengers}
 
 
 %% \begin{longtable}{lr>{\raggedright}m{4cm}m{4cm}}
 \begin{longtable}{lrm{4cm}m{4cm}}
 \averse{yA 'imAm al-rusli yA sanadI}{'anta bAbu al-l_ahi wa mu`tamadI}{O Leader of the Messengers, O My Support}{you are the door to Allah, my reliance!}
 \averse{fa-bi-dunyAya wa 'A_hiratI}{yA rasUlu al-l_ahi _hu_d bi-yadI}{In my life and in my hereafter}{O Messenger of Allah take my hand}
+\hline
 \averse{qasamaN bi-al-najmi .hIna hawY}{mA al-mu`AfY wa al-saqImu sawA}{I swear by the falling star}{the healthy and the sick are not alike}
 \averse{fa-a_hla`i al-kawnayni `anka siwY}{.hubbi mawlY al-`urbi wa al-`ajami}{So renounce both worlds apart from}{love for the master of the Arabs and non-Arabs}
 \averse{sayyidu al-sAdAti min mu.dariN}{.gaw_tu 'ahli al-badwi wa al-.ha.dari}{The master of masters from Mudar}{the saviour of people of the desert and cities}
@@ -134,14 +172,16 @@
 %% \averse{yA 'a`azza al-nAsi martabaTaN}{`ud bifa.dli al-jUdi wa al-karami}{}{}
 \end{longtable}
 
-\bismillah
+
+\songtitle{'alA yA al-l_ah bi na.zraT}{O God by Your glance}
 
 % Arabic source: https://www.dutaislam.com/2020/01/teks-lirik-ala-ya-allah-binadzroh-arab-latin-indonesia-dan-inggris.html
 % Translation source: https://seekersguidance.org/articles/video/ala-ya-allah-bi-nadhra-imam-haddads-poem-at-his-wifes-death/
 
 \begin{longtable}{lrm{4cm}m{4cm}}
-\averse{'alA yA al-l_ah bi na.zraT}{min al-`ayn-i al-ra.hImaT}{O God by your glance}{from the eye of mercy}
+\averse{'alA yA al-l_ah bi na.zraT}{min al-`ayn-i al-ra.hImaT}{O God by Your glance}{from the eye of mercy}
 \averse{tudAwI kulla mA bI}{min 'amrA.diN saqImaT}{Erase all that it is in me}{of every type of sickness}
+\hline
 \averse{'alA yA .sA.h yA .sA.h}{lA tajza` wa ta.djar}{O my friend}{do not be overburdened with worries}
 \averse{wa sallim lilmaqAdIr}{kay tu.hmad wa tu'jar}{And submit to God’s decrees}{so that you can become praiseworthy and rewarded}
 \averse{wa kun ra.diN bimA qaddar}{al-mawlY wa dabbar}{And be content with what}{the Master has decreed}
@@ -193,47 +233,26 @@
 %% \bverse{kullu man .ha.t.ta ra.hlahu bi-karImin}{nAla 'aq.sY al-munY wa kulla al-sUli}{All whose journey ends at the house of a generous host}{get what they ask for, even their most extreme desires}
 %% \end{longtable}
 
-\bismillah
-
-\begin{longtable}{m{8cm}m{4cm}m{4cm}}
-\bverse{lA 'il_aha 'illA al-l_ah lA 'il_aha 'illA al-l_ah}{lA 'il_aha 'illA al-l_ah mu.hammad rasUlu al-l_ah}{There is no god but God}{Muhammad is the messenger of God}
-\bverse{laka al-.hamdu yA _dA al-.hilmi wa al-`afwi wa al-sitri}{wa .hamdiya min nu`mAka yA wAsi`a al-birri}{Praise is due to You, the possessor of serenity, forgiveness and veiling}{My praise is part of Your blessing, oh abundant Giver}
-\bverse{laka al-.hamdu `adda al-qa.tri wa al-ramli wa al.ha.sY}{wa `adda nabAti al-ar.di wa al-.hUti fI al-ba.hri}{Praise is due to You, in number as great as the drops of rain, the grains of sand, the pebbles}{the plants of the earth and the fish of the sea}
-\bverse{laka al-.hamdu `adda al-namli wa al-jinni wa al-'insi}{wa mil'a al-samA wa al-`ar^si wa al-kawkabi al-durri}{Praise is due to You in number as great as the ants, jinn and men}{in quantity as great as the sky, the throne, and the stars like scattered pearls}
-\bverse{wa mil'a al-fa.dA wa al-law.hi wa al-kursI waw al-_tarY}{wa `adda jamI`i alkA'inAti 'ilY al-.ha^sri}{In quantity as great as space itself, and the tablet of forms, the footstool, the most earth}{and the number of all created beings on the day of gathering}
-\bverse{laka al-.hamdu yA rabbI kamA anta 'ahluhu}{fa-'innI lA 'u.h.sI al-_tanA'a madY al-dahri}{Praise is due to You O my Loard as you desrve it}{for I cannot praise You fittingly to the full extent of time}
-\bverse{laka al-.hamdu yA mu`.tI al-mawAhiba bi-al-fa.dli}{wa mAni.ha 'ahli al-l_ahi bi-al-fat.hi wa al-na.sri}{Praise is due to You oh endless Giver of gifts}{the One who grants opening and triumph to the people of Allah}
-\bverse{laka al-.hamdu bi-al'anfAsi wa al-jismi wa al-qalbi}{tafa.d.dal `alY `abdiN ta.hayyara fI al-'amri}{Praise is due to You with every breath with the body and the heart}{Look kindly on a slave who is perplexed by the command}
-\bverse{fa-'innI wa 'in kAnat _dunUbI ta`UqunI}{fa-lI fIka .husnu al-.zanni yajburu lI kasrI}{If my wrong actions weigh me down}{I still have a good opinion of You that You will mend my broken spirit}
-\bverse{fa-munna `alaynA yA .gafUru bi-tawbaTiN}{tajubbu alla_dI qad kAna fI sAlifi al-`umri}{O Forgiving! Grant a turning away [from wrong action] to us}{which will undo what happened in our early years}
-\bverse{wa zidnA mina al-na`mA'i wa al-nUri wa al-ka^sfi}{wa makkinnA fI al-'ir^sAdi bi-al-'i_dni wa al-sirri}{Increase us in blessing, light and unveiling}{and strengthen us in guidance, with permission and with the secret}
-\bverse{wa 'ayyidnA fI 'aqwAlinA wa fi`AlinA}{wa yassirlanA al-'arzAqa min .hai_tu lA nadrI}{Support us in our words and deeds}{and make our provision easy for us --- from where we know not!}
-\bverse{fa-hA na.hnu fI bAbi al-tafa.d.duli wAqifuN}{wa munta.ziruN `a.tfa al-.habIbi bi-lA `usri}{Here we are standing at the door of favour}{waiting without hardship for the Beloved to turn to us}
-\bverse{fa'an`im `alaynA yA mujIbu bi sur`aTiN}{fa-'innaka 'ahlu al-jUdi wa al-manni wa al-_hayri}{Swiftly send us Your ease, O Answerer}{for You are the possessor of generosity, liberality and goodness}
-\bverse{fa-fa.dluka mawjUduN bi-.gayri wujUdinA}{wa jUduka masdUluN `alaynA bi-lA nukri}{Your Bounty exists without our existence}{and Your Generosity pours down on us, undenied}
-\bverse{wa wafiqnA li-l-^sukri alla_dI huwa lAzimuN}{`alaynA wa yastad`I al-mazIda bi-lA _husri}{Give us success in the thankfulness which is our duty}{and which itself calls for increase from You without loss to us}
-\bverse{wa 'a_hirnA min sijni al-jusUmi wa raqqinA}{li-.ha.drati 'arwA.hiN _tawAbaN `alY al-^sukri}{Free us from the prison of our bodies and raise us up}{to the presence of the spirits as a reward for our gratitude}
-\bverse{wa 'a^shidnA ma`nY al-_dAti fI kulli ma.zhariN}{li-yaqwY ^suhUdI fI al-^sadA'idi wa al-yusri}{Let us see the meaning of the essence in every manifestation}{in order to strengthen our witnessing both in times of ease and trouble}
-\bverse{wa 'afninA `annA wa abqinA bi-ka dA'imaN}{li-nal.haqa 'ahla al-'ir_ti min .ha.draTi al-sirri}{Annihilate us to ourselves and give us going-on in You always}{so that we may join the people who have inherited the presence of the secret}
-\bverse{fa-'amruka li-l-'a^syA'i fI qawli kun takun}{fa-kawwin la-nA al-'a^syA'a `azmaN bilA makri}{Your command to things is in the word ``Be --- it is!''}{so shape things for us with firm intention and without deception}
-\bverse{wa .salli bi-'anwA`i al-kamAlAti kullihA}{`alY 'a.hmada alhAdI 'ilY .ha.draTi al-.tuhri}{Bless Ahmad, the guide to the presence of purity}{with all the forms of perfection}
-\bverse{wa 'Alihi wa al-.sa.hbi al-kirAmi wa man da`A}{li-nA.zimi h_a_dA al-na.zmi bi-al-^sar.hi li-l-.sadri}{And his Family and noble Companions and whoever prays}{for expansion of the breast for the composer of these verses}
-\bverse{wa yA rabbi bi-al-hAdI al-ra'Ufi muhammadiN}{'anilnA `ulUmaN tanfa`unA yawma al-na^sri}{Amd O Lord! Through the compassionate guide Muhammad}{grant us sciences that will benefit us on the Day of Rising}
-\bverse{wa qawwinA bi-al-'anwAri fI kulli la.h.zaTiN}{wa _tabbitnA `inda al-_hatmi wa al-naz`i wa al-qabri}{Strengthen us with lights at every instant}{and make us firm at the sealing, the agony of death, and the grave}
-\end{longtable}
 
 
-\songtitle{The Shadhuli Wird}
+\songtitle{al-wird al-^sA_duliyyaT}{The Shadhuli Wird}
 
 
 \begin{longtable}{m{8cm}m{4cm}m{4cm}}
-  \cverse{asta.gfiru al-l_ahu al-`a.zIm (100)}{I seek forgiveness from God the Almighty}
+  \cverse{asta.gfiru al-l_aha al-`a.zIm (100)}{I seek forgiveness from God the Almighty}
   \cverse{alla_dI lA 'il_aha illAhu, al-.hayyu al-qayyUm wa 'atUbu 'ilayh}{The Living the Self-Subsistent, and I repent to Him}
+\hline
   \bverse{al-l_ahumma .salli `alY sayyidinA mu.hammadiN}{wa 'Alihi wa .sa.hbihi wa sallim (100)}{O God send prayers upon our Master Muhammad}{and his family and companions, and send peace}
   \cverse{mu.hammaduN rasUlu al-l_ah}{Muhammad is the Messenger of God}
+\hline
   \cverse{lA 'il_aha 'illA al-l_ah (100)}{There is no god but God}
   \cverse{mu.hammaduN rasUlu al-l_ah}{Muhammad is the Messenger of God}
+\hline
   \cverse{al-l_ah}{God}
+  \hline
+  \cverse{qul huwa al-l_ahu 'a.had... (3)}{Say: He is God, One, etc.}
+  \cverse{qul 'a`U_du bi-rabbi al-falaq...}{Say: I seek refuge in the Lord of daybreak, etc.}
+  \cverse{qul 'a`U_du bi-rabbi al-nAs...}{Say: I seek refuge in the Lord of men, etc.}
 \end{longtable}
 
 
